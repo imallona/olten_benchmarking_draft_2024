@@ -48,33 +48,33 @@
 %\usepackage{natbib}
 \addbibresource{manifesto-main.bib} % your .bib file
 
-% Customizing biblatex for Harvard style
-% Customizing biblatex for Harvard style
-\DeclareNameAlias{sortname}{family-given}
-\DeclareNameAlias{default}{family-given}
+% % Customizing biblatex for Harvard style
+% % Customizing biblatex for Harvard style
+% \DeclareNameAlias{sortname}{family-given}
+% \DeclareNameAlias{default}{family-given}
 
 \renewbibmacro{in:}{}
-\DeclareFieldFormat[article]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[book]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[bookinbook]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[inbook]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[incollection]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[inproceedings]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[manual]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[misc]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[unpublished]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[patent]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[report]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[online]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[software]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[booklet]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[periodical]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[standard]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[article]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[book]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[bookinbook]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[inbook]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[incollection]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[inproceedings]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[manual]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[misc]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[unpublished]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[patent]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[report]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[online]{title}{\mkbibquote{#1}\addcomma}
+% \DeclareFieldFormat[software]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[booklet]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[periodical]{title}{\mkbibemph{#1}\addcomma}
+% \DeclareFieldFormat[standard]{title}{\mkbibemph{#1}\addcomma}
 
-\DeclareFieldFormat[article]{journaltitle}{\iffieldundef{shortjournal}{\mkbibemph{#1}\addcomma}{\mkbibemph{\printfield{shortjournal}}\addcomma}}
-\DeclareFieldFormat{volume}{\bibstring{volume}~#1}
-\DeclareFieldFormat{number}{\bibstring{number}~#1}
+% \DeclareFieldFormat[article]{journaltitle}{\iffieldundef{shortjournal}{\mkbibemph{#1}\addcomma}{\mkbibemph{\printfield{shortjournal}}\addcomma}}
+% \DeclareFieldFormat{volume}{\bibstring{volume}~#1}
+% \DeclareFieldFormat{number}{\bibstring{number}~#1}
 
 % Definitions for "Vol." and "No."
 \DefineBibliographyStrings{english}{
