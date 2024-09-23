@@ -30,7 +30,9 @@
 \usepackage{authblk}
 \usepackage{xcolor} % Load the xcolor package for color options
 \usepackage{microtype}
-\usepackage{url}
+%\usepackage{url}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
 
 %\usepackage{makecell} % multiline table cells
 
@@ -123,7 +125,7 @@ In an ideal situation, running a benchmark includes executing a workflow, a proc
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{figures/bens_formalization.pdf}
+    \includegraphics[width=0.75\linewidth]{figures/bens_formalization.pdf}
     \caption[Benchmark formalization.]{Benchmark formalization. \textbf{A}) Running a benchmark requires running a workflow (execution phase) to generate results to be critically evaluated (analysis phase). \textbf{B}) the execution phase consists on a mapping of methods to specific input files to generate output files, with optional steps to harmonize data and parametrize runs.}
     \label{fig:formalization}
 \end{figure}
@@ -136,7 +138,7 @@ Currently, most benchmarking systems aim to enhance the workflow formalization a
 
 Benchmarks are often focused on finding the `top' performing method, or on generating ranked lists of methods. While this is valid in a few fields with clearly defined goals, such as image recognition \cite{Khan2018-ot} or protein structure prediction \cite{Jumper2021-oq}, bioinformatics tasks are typically evaluated by multiple metrics, some of which are not well understood \cite{Lutge2021-mt, Reinke2024-dw}. Additionally, ground truths are not always well-defined (e.g., derived with uncertainty from other experimental data), multiple tasks (e.g., represented by different reference datasets) may be evaluated for a single method and several ways to assess performance are possible. Even when accompanied by dataset- and/or metric-specific performance measures, scaling and aggregation of results make it difficult to unpack fine-grained nuances of performance from a final summary table reported as a FunkyHeatmap \cite{funkyheatmap} as in most benchmarks (e.g., \cite{Saelens2019-jy}). Strobl \textit{et al.} push back against the `one method fits all datasets’ philosophy and advocate for highlighting dataset or parameter properties that are predictive of method performance \cite{Jelizarow2010-kr, Boulesteix2010-zj, Strobl2024-lp}. This aligns with what a data analyst wants: to identify the best performers in settings most similar to their problem at hand. This requires not only a thorough benchmark design, e.g., tracking of meaningful dataset metadata \cite{Strobl2024-lp}, but also can be supported by a benchmarking system that facilitates flexible navigation of results (e.g., via an interactive dashboard). 
 
-Besides dashboards for more nuanced result exploration \cite{MariniUnknown-aq}, multi-criteria decision analysis (MCDA) \cite{Taherdoost2023-wd} has been proposed to guide users through benchmark results and multidimensional scaling (MDS) has been used to differentiate the effect of single datasets or metrics and recognize patterns beyond aggregated performance \cite{Niessl2022-fk}. An extensive analysis and presentation of the results not only helps the users in the long term but also the whole scientific field to identify pain points, the complexity of possible scenarios and to isolate the different use-cases. The first advantage of such a strategy is to force the user to an attentive reading of the performance results so that the correct use-case and relevant methods can be identified. The second, more important, advantage to present benchmark results extensively is to identify the challenges in a field of analysis, i.e., the scenarios, types of datasets, or aspects of performance that are systematically associated with poor results for all current methods. Being public and open to contributions from specialists of different fields, a benchmarking system could gather more reference datasets and methods, and allow the current state of the field to be better grasped. 
+Besides dashboards for more nuanced result exploration \cite{bettr}, multi-criteria decision analysis (MCDA) \cite{Taherdoost2023-wd} has been proposed to guide users through benchmark results and multidimensional scaling (MDS) has been used to differentiate the effect of single datasets or metrics and recognize patterns beyond aggregated performance \cite{Niessl2022-fk}. An extensive analysis and presentation of the results not only helps the users in the long term but also the whole scientific field to identify pain points, the complexity of possible scenarios and to isolate the different use-cases. The first advantage of such a strategy is to force the user to an attentive reading of the performance results so that the correct use-case and relevant methods can be identified. The second, more important, advantage to present benchmark results extensively is to identify the challenges in a field of analysis, i.e., the scenarios, types of datasets, or aspects of performance that are systematically associated with poor results for all current methods. Being public and open to contributions from specialists of different fields, a benchmarking system could gather more reference datasets and methods, and allow the current state of the field to be better grasped. 
 
 %As a result, the performance results will tend to better fit to the current state of the field, as opposed to a static benchmark led by a small panel of experts that leads to a smaller, and sometimes (un)intentionally biased view of the field \cite{Boulesteix2010-zj, Weber2019-el}. 
 
