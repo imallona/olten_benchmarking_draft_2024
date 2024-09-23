@@ -3,114 +3,124 @@
 \bibitem{Cao2023-jz}
 Cao Y, Yu L, Torkel M, Kim S, Lin Y, Yang P, et~al.
 \newblock The current landscape and emerging challenges of benchmarking
-  single-cell methods:2023.12.19.572303.
+  single-cell methods.
+\newblock bioRxiv. 2023:2023.12.19.572303.
 \newblock Available from:
   \url{https://www.biorxiv.org/content/10.1101/2023.12.19.572303v1.abstract}.
 
 \bibitem{Sonrel2023-te}
 Sonrel A, Luetge A, Soneson C, Mallona I, Germain PL, Knyazev S, et~al.
 \newblock Meta-analysis of (single-cell method) benchmarks reveals the need for
-  extensibility and interoperability;24:119.
+  extensibility and interoperability.
+\newblock Genome Biol. 2023;24:119.
 \newblock Available from:
-  \url{{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02962-5}}.
+  \url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-02962-5}.
 
 \bibitem{Boulesteix2013-vy}
 Boulesteix AL, Lauer S, Eugster MJA.
-\newblock A plea for neutral comparison studies in computational
-  sciences;8:e61562.
+\newblock A plea for neutral comparison studies in computational sciences.
+\newblock PLoS One. 2013;8:e61562.
 \newblock Available from:
-  \url{{https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0061562&type=printable}}.
+  \url{https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0061562&type=printable}.
 
 \bibitem{Weber2019-el}
 Weber LM, Saelens W, Cannoodt R, Soneson C, Hapfelmeier A, Gardner PP, et~al.
-\newblock Essential guidelines for computational method benchmarking;20:125.
-\newblock Available from: \url{{http://dx.doi.org/10.1186/s13059-019-1738-8}}.
+\newblock Essential guidelines for computational method benchmarking.
+\newblock Genome Biol. 2019;20:125.
+\newblock Available from: \url{http://dx.doi.org/10.1186/s13059-019-1738-8}.
 
 \bibitem{Rich2024-jh}
 Rich JM, Moses L, Einarsson PH, Jackson K, Luebbert L, Booeshaghi AS, et~al.
 \newblock The impact of package selection and versioning on single-cell
-  {RNA}-seq analysis:2024.04.04.588111.
+  {RNA}-seq analysis.
+\newblock bioRxivorg. 2024:2024.04.04.588111.
 \newblock Available from:
-  \url{{https://www.biorxiv.org/content/10.1101/2024.04.04.588111v2.abstract}}.
+  \url{https://www.biorxiv.org/content/10.1101/2024.04.04.588111v2.abstract}.
 
 \bibitem{Wilkinson2016-bh}
 Wilkinson MD, Dumontier M, Aalbersberg IJJ, Appleton G, Axton M, Baak A, et~al.
 \newblock The {FAIR} Guiding Principles for scientific data management and
-  stewardship;3:160018.
-\newblock Available from: \url{{https://pubmed.ncbi.nlm.nih.gov/26978244/}}.
+  stewardship.
+\newblock Sci Data. 2016;3:160018.
+\newblock Available from: \url{https://pubmed.ncbi.nlm.nih.gov/26978244/}.
 
 \bibitem{Wratten2021-el}
 Wratten L, Wilm A, Göke J.
 \newblock Reproducible, scalable, and shareable analysis pipelines with
-  bioinformatics workflow managers;18:1161-8.
+  bioinformatics workflow managers.
+\newblock Nat Methods. 2021;18:1161-8.
 \newblock Available from:
-  \url{{https://www.nature.com/articles/s41592-021-01254-9}}.
+  \url{https://www.nature.com/articles/s41592-021-01254-9}.
 
 \bibitem{Amstutz2024-qk}
 Amstutz P, Mikheev M, Crusoe MR, Tijanić N, Lampa S. Existing Workflow
-  systems;.
+  systems; 2024.
 \newblock Available from: \url{https://s.apache.org/existing-workflow-systems}.
 
 \bibitem{Amstutz2016-vo}
 Amstutz P, Crusoe MR, Tijanić N, Chapman B, Chilton J, Heuer M, et~al.. Common
-  Workflow Language, {v1}.0. figshare;.
+  Workflow Language, {v1}.0. figshare; 2016.
 \newblock Available from:
   \url{https://research.manchester.ac.uk/files/57032693/cwl_1.0_workflow.pdf}.
 
 \bibitem{Goble2020-ps}
 Goble C, Cohen-Boulakia S, Soiland-Reyes S, Garijo D, Gil Y, Crusoe MR, et~al.
-\newblock {FAIR} computational workflows;2:108-21.
+\newblock FAIR computational workflows.
+\newblock Data Intell. 2020;2:108-21.
 \newblock Available from:
-  \url{{https://direct.mit.edu/dint/article-pdf/2/1-2/108/1893377/dint_a_00033.pdf}}.
+  \url{https://direct.mit.edu/dint/article-pdf/2/1-2/108/1893377/dint_a_00033.pdf}.
 
 \bibitem{Hanssen2023-uf}
 Hanssen F, Gabernet G, Smith NH, Mertes C, Neogi AG, Brandhoff L, et~al.
-\newblock {NCBench}: providing an open, reproducible, transparent, adaptable,
-  and continuous benchmark approach for {DNA}-sequencing-based variant
-  calling;12:1125.
-\newblock Available from: \url{{https://f1000research.com/articles/12-1125}}.
+\newblock NCBench: providing an open, reproducible, transparent, adaptable, and
+  continuous benchmark approach for {DNA}-sequencing-based variant calling.
+\newblock F1000Research. 2023;12:1125.
+\newblock Available from: \url{https://f1000research.com/articles/12-1125}.
 
 \bibitem{Capella-Gutierrez2017-dh}
 Capella-Gutierrez S, de~la Iglesia D, Haas J, Lourenco A, Fernández JM,
   Repchevsky D, et~al.
 \newblock Lessons Learned: Recommendations for Establishing Critical Periodic
-  Scientific Benchmarking:181677.
+  Scientific Benchmarking.
+\newblock bioRxiv. 2017:181677.
 \newblock Available from:
-  \url{{https://www.biorxiv.org/content/10.1101/181677v1}}.
+  \url{https://www.biorxiv.org/content/10.1101/181677v1}.
 
 \bibitem{Luecken2024-fk}
 Luecken MD, Gigante S, Burkhardt DB, Cannoodt R, Strobl DC, Markov NS, et~al.
 \newblock Defining and benchmarking open problems in single-cell analysis.
+\newblock Res Sq. 2024.
 \newblock Available from:
-  \url{{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11030530/}}.
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11030530/}.
 
 \bibitem{Khan2018-ot}
 Khan RU, Zhang X, Kumar R, Aboagye EO.
 \newblock Evaluating the performance of {ResNet} model based on image
   recognition.
 \newblock In: Proceedings of the 2018 International Conference on Computing and
-  Artificial Intelligence. ACM;. Available from:
-  \url{{https://dl.acm.org/doi/10.1145/3194452.3194461}}.
+  Artificial Intelligence. ACM; 2018. Available from:
+  \url{https://dl.acm.org/doi/10.1145/3194452.3194461}.
 
 \bibitem{Jumper2021-oq}
 Jumper J, Evans R, Pritzel A, Green T, Figurnov M, Ronneberger O, et~al.
-\newblock Highly accurate protein structure prediction with
-  {AlphaFold};596:583-9.
+\newblock Highly accurate protein structure prediction with AlphaFold.
+\newblock Nature. 2021;596:583-9.
 \newblock Available from:
-  \url{{https://www.nature.com/articles/s41586-021-03819-2}}.
+  \url{https://www.nature.com/articles/s41586-021-03819-2}.
 
 \bibitem{Lutge2021-mt}
 Lütge A, Zyprych-Walczak J, Brykczynska~Kunzmann U, Crowell HL, Calini D,
   Malhotra D, et~al.
-\newblock {CellMixS}: quantifying and visualizing batch effects in single-cell
-  {RNA}-seq data;4.
-\newblock Available from: \url{{http://dx.doi.org/10.26508/lsa.202001004}}.
+\newblock CellMixS: quantifying and visualizing batch effects in single-cell
+  RNA-seq data.
+\newblock Life Sci Alliance. 2021;4.
+\newblock Available from: \url{http://dx.doi.org/10.26508/lsa.202001004}.
 
 \bibitem{Reinke2024-dw}
 Reinke A, Tizabi MD, Baumgartner M, Eisenmann M, Heckmann-Nötzel D, Kavur AE,
   et~al.
-\newblock Understanding metric-related pitfalls in image analysis
-  validation;21:182-94.
+\newblock Understanding metric-related pitfalls in image analysis validation.
+\newblock Nat Methods. 2024;21:182-94.
 \newblock Available from:
   \url{{https://www.nature.com/articles/s41592-023-02150-0}}.
 
@@ -122,94 +132,108 @@ Cannoodt R, Saelens W. funkyheatmap: Generating Funky Heatmaps for Data Frames.
 
 \bibitem{Saelens2019-jy}
 Saelens W, Cannoodt R, Todorov H, Saeys Y.
-\newblock A comparison of single-cell trajectory inference methods;37:547-54.
-\newblock Available from: \url{{http://dx.doi.org/10.1038/s41587-019-0071-9}}.
+\newblock A comparison of single-cell trajectory inference methods.
+\newblock Nat Biotechnol. 2019;37:547-54.
+\newblock Available from: \url{http://dx.doi.org/10.1038/s41587-019-0071-9}.
 
 \bibitem{Jelizarow2010-kr}
 Jelizarow M, Guillemot V, Tenenhaus A, Strimmer K, Boulesteix AL.
-\newblock Over-optimism in bioinformatics: an illustration;26:1990-8.
+\newblock Over-optimism in bioinformatics: an illustration.
+\newblock Bioinformatics. 2010;26:1990-8.
 \newblock Available from:
-  \url{{http://dx.doi.org/10.1093/bioinformatics/btq323}}.
+  \url{http://dx.doi.org/10.1093/bioinformatics/btq323}.
 
 \bibitem{Boulesteix2010-zj}
 Boulesteix AL.
-\newblock Over-optimism in bioinformatics research;26:437-9.
+\newblock Over-optimism in bioinformatics research.
+\newblock Bioinformatics. 2010;26:437-9.
 \newblock Available from:
-  \url{{http://dx.doi.org/10.1093/bioinformatics/btp648}}.
+  \url{http://dx.doi.org/10.1093/bioinformatics/btp648}.
 
 \bibitem{Strobl2024-lp}
 Strobl C, Leisch F.
 \newblock Against the "one method fits all data sets" philosophy for comparison
-  studies in methodological research;66:e2200104.
+  studies in methodological research.
+\newblock Biom J. 2024;66:e2200104.
 \newblock Available from:
-  \url{{https://onlinelibrary.wiley.com/doi/abs/10.1002/bimj.202200104}}.
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/bimj.202200104}.
 
 \bibitem{bettr}
-Marini F, Soneson C. bettr: A better way to explore what is best [software];.
+Marini F, Soneson C. bettr: A better way to explore what is best [software];
+  2024.
 \newblock Available from:
   \url{https://www.bioconductor.org/packages/release/bioc/html/bettr.html}.
 
 \bibitem{Taherdoost2023-wd}
 Taherdoost H, Madanchian M.
-\newblock Multi-criteria decision making ({MCDM}) methods and concepts;3:77-87.
-\newblock Available from: \url{{https://www.mdpi.com/2673-8392/3/1/6}}.
+\newblock Multi-criteria decision making ({MCDM}) methods and concepts.
+\newblock Encyclopedia (Basel, 2021). 2023;3:77-87.
+\newblock Available from: \url{https://www.mdpi.com/2673-8392/3/1/6}.
 
 \bibitem{Niessl2022-fk}
 Nießl C, Herrmann M, Wiedemann C, Casalicchio G, Boulesteix AL.
 \newblock Over‐optimism in benchmark studies and the multiplicity of design
-  and analysis options when interpreting their results;12:e1441.
+  and analysis options when interpreting their results.
+\newblock Wiley Interdiscip Rev Data Min Knowl Discov. 2022;12:e1441.
 \newblock Available from:
-  \url{{https://onlinelibrary.wiley.com/doi/abs/10.1002/widm.1441}}.
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/widm.1441}.
 
 \bibitem{Greenstein2016-os}
 Greenstein S, Zhu F.
-\newblock Open content, Linus’ law, and neutral Point of View;27:618-35.
+\newblock Open content, Linus’ law, and neutral Point of View.
+\newblock Inf Syst Res. 2016;27:618-35.
 \newblock Available from:
-  \url{{https://pubsonline.informs.org/doi/abs/10.1287/isre.2016.0643}}.
+  \url{https://pubsonline.informs.org/doi/abs/10.1287/isre.2016.0643}.
 
 \bibitem{Sullivan2019-wh}
 Sullivan I, DeHaven A, Mellor D.
-\newblock Open and reproducible research on open science framework;18:e32.
+\newblock Open and reproducible research on open science framework.
+\newblock Curr Protoc Essent Lab Tech. 2019;18:e32.
 \newblock Available from:
-  \url{{https://onlinelibrary.wiley.com/doi/abs/10.1002/cpet.32}}.
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/cpet.32}.
 
 \bibitem{Olevska2021-if}
 Olevska A, Bert B, Ebrahimi L, Schonfelder G, Heinl C.
 \newblock Ensuring reproducible research requires a support infrastructure: The
-  value of public registries to publishers:4-7.
+  value of public registries to publishers.
+\newblock Sci Editor. 2021:4-7.
 \newblock Available from:
-  \url{{https://www.csescienceeditor.org/wp-content/uploads/2021/02/CSEv44n1-pp4-7.pdf}}.
+  \url{https://www.csescienceeditor.org/wp-content/uploads/2021/02/CSEv44n1-pp4-7.pdf}.
 
 \bibitem{Siepe2023-tz}
 Siepe BS, Bartoš F, Morris TP, Boulesteix AL, Heck DW, Pawel S.
 \newblock Simulation studies for methodological research in psychology: A
   standardized template for planning, preregistration, and reporting.
-\newblock Available from: \url{{https://osf.io/preprints/psyarxiv/ufgy6}}.
+\newblock PsyArXiv. 2023.
+\newblock Available from: \url{https://osf.io/preprints/psyarxiv/ufgy6}.
 
 \bibitem{Howison2015-rc}
 Howison J, Deelman E, McLennan MJ, Ferreira~da Silva R, Herbsleb JD.
 \newblock Understanding the scientific software ecosystem and its impact:
-  Current and future measures;24:454-70.
+  Current and future measures.
+\newblock Res Eval. 2015;24:454-70.
 \newblock Available from:
-  \url{{https://academic.oup.com/rev/article-pdf/24/4/454/5445388/rvv014.pdf}}.
+  \url{https://academic.oup.com/rev/article-pdf/24/4/454/5445388/rvv014.pdf}.
 
 \bibitem{Trisovic2022-ol}
 Trisovic A, Lau MK, Pasquier T, Crosas M.
-\newblock A large-scale study on research code quality and execution;9:60.
+\newblock A large-scale study on research code quality and execution.
+\newblock Sci Data. 2022;9:60.
 \newblock Available from:
-  \url{{https://www.nature.com/articles/s41597-022-01143-6}}.
+  \url{https://www.nature.com/articles/s41597-022-01143-6}.
 
 \bibitem{Pike1984-we}
 Pike R, Kernighan B.
-\newblock The {UNIX} system: Program design in the {UNIX}
-  environment;63:1595-605.
-\newblock Available from: \url{{http://squoze.net/UNIX/bltj/06771909.pdf}}.
+\newblock The {UNIX} system: Program design in the {UNIX} environment.
+\newblock AT T Bell Lab Tech J. 1984;63:1595-605.
+\newblock Available from: \url{http://squoze.net/UNIX/bltj/06771909.pdf}.
 
 \bibitem{Proctor2018-do}
 Proctor RW, Schneider DW.
-\newblock Hick’s law for choice reaction time: A review;71:1281-99.
+\newblock Hick’s law for choice reaction time: A review.
+\newblock Quarterly Journal of Experimental Psychology. 2018;71:1281-99.
 \newblock Available from:
-  \url{url[https://journals.sagepub.com/doi/abs/10.1080/17470218.2017.1322622}.
+  \url{https://journals.sagepub.com/doi/abs/10.1080/17470218.2017.1322622}.
 
 \bibitem{ProcidaUnknown-vf}
 Procida D. Diátaxis;.
@@ -217,104 +241,112 @@ Procida D. Diátaxis;.
 
 \bibitem{Hill2024-gf}
 Hill D, Antunes BA, Bertrand A, Nguifo EM, Yon L, Nautré-Domanski J, et~al..
-  Machine learning and reproducibility impact of random numbers;.
-\newblock Available from: \url{\ul{https://hal.science/hal-04642175v1}}.
+  Machine learning and reproducibility impact of random numbers; 2024.
+\newblock Available from: \url{https://hal.science/hal-04642175v1}.
 
 \bibitem{Kurtzer2017-mn}
 Kurtzer GM, Sochat V, Bauer MW.
-\newblock Singularity: Scientific containers for mobility of
-  compute;12:e0177459.
-\newblock Available from:
-  \url{{http://dx.doi.org/10.1371/journal.pone.0177459}}.
+\newblock Singularity: Scientific containers for mobility of compute.
+\newblock PLoS One. 2017;12:e0177459.
+\newblock Available from: \url{http://dx.doi.org/10.1371/journal.pone.0177459}.
 
 \bibitem{Hoste2012-gg}
 Hoste K, Timmerman J, Georges A, De~Weirdt S.
-\newblock {EasyBuild}: Building Software with Ease.
+\newblock EasyBuild: Building Software with Ease.
 \newblock In: 2012 SC Companion: High Performance Computing, Networking Storage
-  and Analysis. IEEE;. p. 572-82.
+  and Analysis. IEEE; 2012. p. 572-82.
 \newblock Available from:
-  \url{{https://ieeexplore.ieee.org/abstract/document/6495863}}.
+  \url{https://ieeexplore.ieee.org/abstract/document/6495863}.
 
 \bibitem{Gamblin2015-ll}
 Gamblin T, LeGendre M, Collette MR, Lee GL, Moody A, de~Supinski BR, et~al.
 \newblock The Spack package manager: bringing order to {HPC} software chaos.
 \newblock In: Proceedings of the International Conference for High Performance
-  Computing, Networking, Storage and Analysis. ACM;. Available from:
-  \url{{https://dl.acm.org/doi/10.1145/2807591.2807623}}.
+  Computing, Networking, Storage and Analysis. ACM; 2015. Available from:
+  \url{https://dl.acm.org/doi/10.1145/2807591.2807623}.
 
 \bibitem{Blomer2013-jk}
 Blomer J, Buncic P, Meusel R.
-\newblock The {CernVM} file system:2-1.
+\newblock The {CernVM} file system.
+\newblock CERN, Geneva, Switzerland, Tech Rep. 2013:2-1.
 \newblock Available from:
-  \url{{https://jblomer.web.cern.ch/cvmfstech-2.1-0.pdf}}.
+  \url{https://jblomer.web.cern.ch/cvmfstech-2.1-0.pdf}.
 
 \bibitem{Boissonneault2019-wm}
 Boissonneault M, Oldeman BE, Taylor RP.
 \newblock Providing a unified software environment for Canada's national
   advanced computing centers.
 \newblock In: Proceedings of the Practice and Experience in Advanced Research
-  Computing on Rise of the Machines (learning). ACM;. Available from:
-  \url{{https://dl.acm.org/doi/10.1145/3332186.3332210}}.
+  Computing on Rise of the Machines (learning). ACM; 2019. Available from:
+  \url{https://dl.acm.org/doi/10.1145/3332186.3332210}.
 
 \bibitem{Droge2023-ax}
 Dröge B, Holanda~Rusu V, Hoste K, van Leeuwen C, O'Cais A, Röblitz T.
-\newblock {EESSI}: A cross‐platform ready‐to‐use optimised scientific
-  software stack;53:176-210.
+\newblock EESSI: A cross‐platform ready‐to‐use optimised scientific
+  software stack.
+\newblock Softw Pract Exp. 2023;53:176-210.
 \newblock Available from:
-  \url{{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.3075}}.
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.3075}.
 
 \bibitem{Jackson2021-ke}
 Jackson M, Kavoussanakis K, Wallace EWJ.
 \newblock Using prototyping to choose a bioinformatics workflow management
-  system;17:e1008622.
-\newblock Available from: \url{{https://pubmed.ncbi.nlm.nih.gov/33630841/}}.
+  system.
+\newblock PLoS Comput Biol. 2021;17:e1008622.
+\newblock Available from: \url{https://pubmed.ncbi.nlm.nih.gov/33630841/}.
 
 \bibitem{Laine2007-py}
 Laine C, Goodman SN, Griswold ME, Sox HC.
 \newblock Reproducible Research: Moving toward Research the Public Can Really
-  Trust;146:450.
+  Trust.
+\newblock Ann Intern Med. 2007;146:450.
 \newblock Available from:
-  \url{{https://www.acpjournals.org/doi/abs/10.7326/0003-4819-146-6-200703200-00154}}.
+  \url{https://www.acpjournals.org/doi/abs/10.7326/0003-4819-146-6-200703200-00154}.
 
 \bibitem{Kreutzer2014-ua}
 Kreutzer T.
 \newblock Open content: A practical guide to using Creative Commons licences.
+  2014.
 \newblock Available from:
-  \url{{http://gsdiassociation.org/images/publications/docdepot/Practical_Guide_to_Using_Open_Content_Licences_2014.pdf}}.
+  \url{http://gsdiassociation.org/images/publications/docdepot/Practical_Guide_to_Using_Open_Content_Licences_2014.pdf}.
 
 \bibitem{Potter2015-fs}
 Potter ME, Smith T.
-\newblock Making code citable with Zenodo and {GitHub}.
-\newblock Available from: \url{{https://core.ac.uk/download/pdf/30472862.pdf}}.
+\newblock Making code citable with Zenodo and GitHub.
+\newblock Software Sustainibility Institute. 2015.
+\newblock Available from: \url{https://core.ac.uk/download/pdf/30472862.pdf}.
 
 \bibitem{Sicilia2017-ko}
 Sicilia MA, García-Barriocanal E, Sánchez-Alonso S.
 \newblock Community curation in open dataset repositories: Insights from
-  zenodo;106:54-60.
+  zenodo.
+\newblock Procedia Comput Sci. 2017;106:54-60.
 \newblock Available from:
-  \url{{https://www.sciencedirect.com/science/article/pii/S1877050917302776}}.
+  \url{https://www.sciencedirect.com/science/article/pii/S1877050917302776}.
 
 \bibitem{van-de-Sandt2019-wd}
 van~de Sandt S, Nielsen LH, Ioannidis A, Muench A, Henneken E, Accomazzi A,
   et~al.
 \newblock Practice meets principle: Tracking software and data citations to
-  Zenodo {DOIs}.
-\newblock Available from: \url{{http://arxiv.org/abs/1911.00295}}.
+  Zenodo DOIs.
+\newblock arXiv [csDL]. 2019.
+\newblock Available from: \url{http://arxiv.org/abs/1911.00295}.
 
 \bibitem{Lamb2021-tb}
 Lamb C, Zacchiroli S.
 \newblock Reproducible Builds: Increasing the integrity of software supply
   chains.
-\newblock Available from: \url{{http://dx.doi.org/10.1109/MS.2021.3073045}}.
+\newblock arXiv [csSE]. 2021.
+\newblock Available from: \url{http://dx.doi.org/10.1109/MS.2021.3073045}.
 
 \bibitem{Huynh2023-pq}
 Huynh D. How Python Data Science Libraries Can Be Hijacked (and What You Can Do
-  About It);.
+  About It); 2023.
 \newblock Available from:
   \url{https://blog.mithrilsecurity.io/how-python-data-science-libraries-can-be-hijacked-and-what-you-can-do-about-it-2/}.
 
 \bibitem{Bleih2024-lv}
-Bleih A. New Vulnerability in {R}'s Deserialization Discovered;.
+Bleih A. New Vulnerability in {R}'s Deserialization Discovered; 2024-05-02.
 \newblock Available from:
   \url{https://cyberint.com/blog/research/new-vulnerability-in-rs-deserialization-discovered/}.
 
@@ -326,7 +358,8 @@ Lebo T, Sahoo S, McGuinness D, Belhajjame K, Cheney J, Corsar D, et~al..
 \bibitem{Moult2005-ne}
 Moult J.
 \newblock A decade of {CASP}: progress, bottlenecks and prognosis in protein
-  structure prediction;15:285-9.
-\newblock Available from: \url{{https://pubmed.ncbi.nlm.nih.gov/15939584/}}.
+  structure prediction.
+\newblock Curr Opin Struct Biol. 2005;15:285-9.
+\newblock Available from: \url{https://pubmed.ncbi.nlm.nih.gov/15939584/}.
 
 \end{thebibliography}
