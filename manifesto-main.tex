@@ -92,7 +92,7 @@ In this work, we give our perspective on how to build a high-standard benchmarki
 Our goal here is to lay out general benchmark parameters and definitions, while abstracting towards an ideal \textit{benchmarking system}. This ranges from general benchmark conceptualization to various technical specifications. We will offer some remarks on the philosophy around the benchmarking activity (e.g., gatekeeping), as well as some technical recommendations (e.g., standards).
 
 
-\section{What is a benchmark?}
+\section*{What is a benchmark?}
 %\label{sec:main_section}
 
 To begin our discussion of benchmarking (in bioinformatics), a few definitions are needed. For example, what actually is a benchmark, precisely? Here, a benchmark is thought of as a conceptual entity that roughly encompasses all the components of a study to understand the performance of a set of (computational) methods for a given task (here, the primary context is computational methods, but the concept can have a broader scope, e.g., evaluation of data-generating technologies). A benchmark requires a well-defined task, such as inferring what set of genes are differentially expressed from a certain type of data (e.g., gene expression from RNA sequencing counts) or whether a high-dimensional dataset can be clustered into the `correct' cell types (the definition of this correctness, or ground-truth, should be precisely defined in advance). Given a well-defined task, a benchmark consists of benchmark `components' (such as simulations to generate datasets, preprocessing steps, methods, metrics). Ideally, a benchmarking system is used to organize and orchestrate the running of the benchmark, and create `artifacts' (code snapshots, file outputs to be shared, results tables). Ultimately, the downstream results and interpretations, which may involve rankings and various additional analyses, will be derived from these artifacts. The various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such a system should facilitate components to be public, open and allow contributions (e.g. corrections or new components), such that the benchmarks of the future can run more continuously.
@@ -286,7 +286,7 @@ No potential conflict of interest is reported by the authors
 \linespread{1.1} 
 %\printbibliography
 
-\bibliographystyle{vancouver}  
+\bibliographystyle{vancouver} % elsarticle-num} % vancouver}  
 \bibliography{clean} % your .bib file
 
 
