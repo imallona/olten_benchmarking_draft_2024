@@ -30,6 +30,9 @@
 \usepackage{authblk}
 \usepackage{xcolor} % Load the xcolor package for color options
 \usepackage{microtype}
+%\usepackage{url}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
 
 %\usepackage{makecell} % multiline table cells
 
@@ -44,135 +47,6 @@
 % Emerald Harvard Citation Style
 
 \usepackage[english]{babel}
-\usepackage[style=authoryear,backend=biber,natbib=true,maxcitenames=2,uniquelist=false]{biblatex}
-%\usepackage{natbib}
-\addbibresource{manifesto-main.bib} % your .bib file
-
-% Customizing biblatex for Harvard style
-% Customizing biblatex for Harvard style
-\DeclareNameAlias{sortname}{family-given}
-\DeclareNameAlias{default}{family-given}
-
-\renewbibmacro{in:}{}
-\DeclareFieldFormat[article]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[book]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[bookinbook]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[inbook]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[incollection]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[inproceedings]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[manual]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[misc]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[unpublished]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[patent]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[report]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[online]{title}{\mkbibquote{#1}\addcomma}
-\DeclareFieldFormat[software]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[booklet]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[periodical]{title}{\mkbibemph{#1}\addcomma}
-\DeclareFieldFormat[standard]{title}{\mkbibemph{#1}\addcomma}
-
-\DeclareFieldFormat[article]{journaltitle}{\iffieldundef{shortjournal}{\mkbibemph{#1}\addcomma}{\mkbibemph{\printfield{shortjournal}}\addcomma}}
-\DeclareFieldFormat{volume}{\bibstring{volume}~#1}
-\DeclareFieldFormat{number}{\bibstring{number}~#1}
-
-% Definitions for "Vol." and "No."
-\DefineBibliographyStrings{english}{
-  volume = {Vol.},
-  number = {No.}
-}
-
-\renewbibmacro*{volume+number+eid}{%
-  \printfield{volume}%
-  \setunit*{\addspace}%
-  \printfield{number}%
-  \setunit{\addcomma\space}%
-  \printfield{eid}}
-
-\renewbibmacro*{journal+issuetitle}{%
-  \usebibmacro{journal}%
-  \setunit*{\addcomma\space}%
-  \usebibmacro{volume+number+eid}%
-  \setunit{\addcomma\space}%
-  \usebibmacro{issue+date}}
-
-\renewbibmacro*{publisher+location+date}{%
-  \printlist{publisher}%
-  \iflistundef{location}
-    {\setunit*{\addcomma\space}}
-    {\setunit*{\addcolon\space}}%
-  \printlist{location}%
-  \setunit*{\addcomma\space}%
-  \usebibmacro{date}}
-
-\renewcommand*{\bibpagespunct}{\addcomma\space}
-
-% Customizing page field format to prevent duplication
-% \DeclareFieldFormat{pages}{%
-%   \mkfirstpage[{\mkpageprefix[page]{#1}}]{#1}}
-
-% Customizing citations for Harvard style
-\DeclareCiteCommand{\cite}[\mkbibparens]
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-   \usebibmacro{cite}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
-
-\renewbibmacro*{cite:labelyear+extrayear}{%
-  \iffieldundef{labelyear}
-    {}
-    {\printtext[bibhyperref]{%
-       \printfield{labelyear}%
-       \printfield{extrayear}}}}
-
-\renewbibmacro*{cite:labeldate+extradate}{%
-  \iffieldundef{labelyear}
-    {}
-    {\printtext[bibhyperref]{%
-       \printfield{labelyear}%
-       \printfield{extradate}}}}
-
-\AtEveryBibitem{
-  \clearfield{month}
-  \clearfield{day}
-  \ifentrytype{book}{
-    \clearlist{location}
-  }{}
-}
-
-% Formatting "et al." in italics followed by a comma
-\DefineBibliographyStrings{english}{
-  andothers = {\textit{et al.},}
-}
-
-\DeclareFieldFormat[article]{volume}{\bibstring{jourvol}\addnbspace #1}
-\DeclareFieldFormat[article]{number}{\bibstring{number}\addnbspace #1}
-\DeclareFieldFormat[article]{volume}{Vol. #1}
-\DeclareFieldFormat[article]{number}{No. #1}
-% Customizing DOI field format to lowercase "doi"
-%\DeclareFieldFormat{doi}{\bibstring{doi}\addcolon\space\url{#1}}
-
-% Customizing URL field format to "available at:"
-\DeclareFieldFormat{url}{\bibstring{available at}\addcolon\space\url{#1}}
-\DeclareFieldFormat{urldate}{\mkbibparens{accessed \addspace#1}}
-
-% Customizing urldate to match the required format
-\DeclareFieldFormat{urldate}{%
-  \mkbibparens{accessed\space%
-    \thefield{urlday}\addspace%
-    \mkbibmonth{\thefield{urlmonth}}\addspace%
-    \thefield{urlyear}}}
-
-
-% Configure cleveref
-\crefformat{figure}{#2Figure~#1#3}
-\Crefformat{figure}{#2Figure~#1#3}
-\crefformat{table}{#2Table~#1#3}
-\Crefformat{table}{#2Table~#1#3}
-\crefformat{section}{#2Section~#1#3}
-\Crefformat{section}{#2Section~#1#3}
-
 
 \title{Building a continuous benchmarking ecosystem in bioinformatics}
 
@@ -197,7 +71,7 @@
 \begin{document}
 \maketitle
 
-\linenumbers
+%\linenumbers
 
 
 \begin{abstract}
@@ -218,7 +92,7 @@ In this work, we give our perspective on how to build a high-standard benchmarki
 Our goal here is to lay out general benchmark parameters and definitions, while abstracting towards an ideal \textit{benchmarking system}. This ranges from general benchmark conceptualization to various technical specifications. We will offer some remarks on the philosophy around the benchmarking activity (e.g., gatekeeping), as well as some technical recommendations (e.g., standards).
 
 
-\section{What is a benchmark?}
+\section*{What is a benchmark?}
 %\label{sec:main_section}
 
 To begin our discussion of benchmarking (in bioinformatics), a few definitions are needed. For example, what actually is a benchmark, precisely? Here, a benchmark is thought of as a conceptual entity that roughly encompasses all the components of a study to understand the performance of a set of (computational) methods for a given task (here, the primary context is computational methods, but the concept can have a broader scope, e.g., evaluation of data-generating technologies). A benchmark requires a well-defined task, such as inferring what set of genes are differentially expressed from a certain type of data (e.g., gene expression from RNA sequencing counts) or whether a high-dimensional dataset can be clustered into the `correct' cell types (the definition of this correctness, or ground-truth, should be precisely defined in advance). Given a well-defined task, a benchmark consists of benchmark `components' (such as simulations to generate datasets, preprocessing steps, methods, metrics). Ideally, a benchmarking system is used to organize and orchestrate the running of the benchmark, and create `artifacts' (code snapshots, file outputs to be shared, results tables). Ultimately, the downstream results and interpretations, which may involve rankings and various additional analyses, will be derived from these artifacts. The various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such a system should facilitate components to be public, open and allow contributions (e.g. corrections or new components), such that the benchmarks of the future can run more continuously.
@@ -251,7 +125,7 @@ In an ideal situation, running a benchmark includes executing a workflow, a proc
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{figures/bens_formalization.pdf}
+    \includegraphics[width=0.75\linewidth]{figures/bens_formalization.pdf}
     \caption[Benchmark formalization.]{Benchmark formalization. \textbf{A}) Running a benchmark requires running a workflow (execution phase) to generate results to be critically evaluated (analysis phase). \textbf{B}) the execution phase consists on a mapping of methods to specific input files to generate output files, with optional steps to harmonize data and parametrize runs.}
     \label{fig:formalization}
 \end{figure}
@@ -264,7 +138,7 @@ Currently, most benchmarking systems aim to enhance the workflow formalization a
 
 Benchmarks are often focused on finding the `top' performing method, or on generating ranked lists of methods. While this is valid in a few fields with clearly defined goals, such as image recognition \cite{Khan2018-ot} or protein structure prediction \cite{Jumper2021-oq}, bioinformatics tasks are typically evaluated by multiple metrics, some of which are not well understood \cite{Lutge2021-mt, Reinke2024-dw}. Additionally, ground truths are not always well-defined (e.g., derived with uncertainty from other experimental data), multiple tasks (e.g., represented by different reference datasets) may be evaluated for a single method and several ways to assess performance are possible. Even when accompanied by dataset- and/or metric-specific performance measures, scaling and aggregation of results make it difficult to unpack fine-grained nuances of performance from a final summary table reported as a FunkyHeatmap \cite{funkyheatmap} as in most benchmarks (e.g., \cite{Saelens2019-jy}). Strobl \textit{et al.} push back against the `one method fits all datasets’ philosophy and advocate for highlighting dataset or parameter properties that are predictive of method performance \cite{Jelizarow2010-kr, Boulesteix2010-zj, Strobl2024-lp}. This aligns with what a data analyst wants: to identify the best performers in settings most similar to their problem at hand. This requires not only a thorough benchmark design, e.g., tracking of meaningful dataset metadata \cite{Strobl2024-lp}, but also can be supported by a benchmarking system that facilitates flexible navigation of results (e.g., via an interactive dashboard). 
 
-Besides dashboards for more nuanced result exploration \cite{MariniUnknown-aq}, multi-criteria decision analysis (MCDA) \cite{Taherdoost2023-wd} has been proposed to guide users through benchmark results and multidimensional scaling (MDS) has been used to differentiate the effect of single datasets or metrics and recognize patterns beyond aggregated performance \cite{Niessl2022-fk}. An extensive analysis and presentation of the results not only helps the users in the long term but also the whole scientific field to identify pain points, the complexity of possible scenarios and to isolate the different use-cases. The first advantage of such a strategy is to force the user to an attentive reading of the performance results so that the correct use-case and relevant methods can be identified. The second, more important, advantage to present benchmark results extensively is to identify the challenges in a field of analysis, i.e., the scenarios, types of datasets, or aspects of performance that are systematically associated with poor results for all current methods. Being public and open to contributions from specialists of different fields, a benchmarking system could gather more reference datasets and methods, and allow the current state of the field to be better grasped. 
+Besides dashboards for more nuanced result exploration \cite{bettr}, multi-criteria decision analysis (MCDA) \cite{Taherdoost2023-wd} has been proposed to guide users through benchmark results and multidimensional scaling (MDS) has been used to differentiate the effect of single datasets or metrics and recognize patterns beyond aggregated performance \cite{Niessl2022-fk}. An extensive analysis and presentation of the results not only helps the users in the long term but also the whole scientific field to identify pain points, the complexity of possible scenarios and to isolate the different use-cases. The first advantage of such a strategy is to force the user to an attentive reading of the performance results so that the correct use-case and relevant methods can be identified. The second, more important, advantage to present benchmark results extensively is to identify the challenges in a field of analysis, i.e., the scenarios, types of datasets, or aspects of performance that are systematically associated with poor results for all current methods. Being public and open to contributions from specialists of different fields, a benchmarking system could gather more reference datasets and methods, and allow the current state of the field to be better grasped. 
 
 %As a result, the performance results will tend to better fit to the current state of the field, as opposed to a static benchmark led by a small panel of experts that leads to a smaller, and sometimes (un)intentionally biased view of the field \cite{Boulesteix2010-zj, Weber2019-el}. 
 
@@ -410,6 +284,10 @@ No potential conflict of interest is reported by the authors
 
 \pagebreak
 \linespread{1.1} 
-\printbibliography
+%\printbibliography
+
+\bibliographystyle{vancouver} % elsarticle-num} % vancouver}  
+\bibliography{clean} % your .bib file
+
 
 \end{document}
