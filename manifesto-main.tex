@@ -18,7 +18,7 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage[utf8]{inputenc}
-\usepackage[right]{lineno}
+%\usepackage[right]{lineno}
 \usepackage{csquotes}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -36,13 +36,7 @@
 
 %\usepackage{makecell} % multiline table cells
 
-\renewcommand{\thetable}{\Roman{table}}
-
-% Define a new format for \subsection
-\titleformat{\subsection}
-  {\mdseries\itshape\large} % Medium series, italic shape, and large font size
-  {\thesubsection}{1em}{} % Numbering, spacing, and the section title itself
-
+%\renewcommand{\thetable}{\Roman{table}}
 
 % Emerald Harvard Citation Style
 
@@ -92,13 +86,12 @@ In this work,  we present a perspective on building a robust benchmarking ecosys
 In our discussion, we outline concepts and specifications for an ideal \textit{benchmarking system}; we examine philosophical issues like gatekeeping and trust; and provide some technical recommendations, such as standardization practices.
 
 
-\section*{What is a benchmarking system?}
+\section*{Why benchmarking systems?}
 %\label{sec:main_section}
 
-We define a benchmark as a conceptual framework to evaluate the performance of computational methods for a given task, though it can extend to assessing other aspects, like data-generating technologies.
-A benchmark thus requires a well-defined task and a definition of correctness, or ground-truth, to be precisely defined in advance. Then, a benchmark consists of benchmark `components', such as simulations to generate datasets, preprocessing steps, methods, metrics. 
+We define a benchmark as a conceptual framework to evaluate the performance of computational methods for a given task, though it can extend to assessing other aspects, like data-generating technologies. A benchmark thus requires a well-defined task and a definition of correctness, or ground-truth, to be precisely defined in advance. Then, a benchmark consists of benchmark `components', such as simulations to generate datasets, preprocessing steps, methods, metrics. 
 
-Can benchmarking be systematized? Benchmarks should be orchestrated and run by `benchmarking system's to create `artifacts' (code snapshots, file outputs to be shared, performance outputs).  The various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such a system should facilitate components to be public, open and allow contributions (e.g. corrections or new components), such that the benchmarks of the future can run more continuously. At the outset of a benchmark, a benchmark `definition' could be envisioned, which could give a formal specification of the entire set of components (and the pattern of artifacts to be generated). The benchmark definition could even be expressed as a single configuration file that specifies the scope and topology of components to include, details of the repositories (code implementations with versions), the instructions to create software environments (accessible across compute architectures), and the parameters used. A benchmark definition in terms of layers and their corresponding challenges and opportunities within each layer is illustrated in Figure~\ref{fig:layers}.
+Can benchmarking be systematized? Benchmarks should be orchestrated and run by \emph{benchmarking systems} to create `artifacts' (code snapshots, file outputs to be shared, performance outputs).  The various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such a system should facilitate components to be public, open and allow contributions (e.g. corrections or new components), such that the benchmarks of the future can run more continuously. At the outset of a benchmark, a benchmark `definition' could be envisioned, which could give a formal specification of the entire set of components (and the pattern of artifacts to be generated). The benchmark definition could even be expressed as a single configuration file that specifies the scope and topology of components to include, details of the repositories (code implementations with versions), the instructions to create software environments (accessible across compute architectures), and the parameters used. A benchmark definition in terms of layers and their corresponding challenges and opportunities within each layer is illustrated in Figure~\ref{fig:layers}.
 
 \begin{figure}
     \centering
@@ -281,7 +274,7 @@ MDR acknowledges funding from the Swiss National Science Foundation (grants 2000
 No potential conflict of interest is reported by the authors
 
 \pagebreak
-\linespread{1.1} 
+\linespread{1} 
 %\printbibliography
 
 \bibliographystyle{vancouver} % elsarticle-num} % vancouver}  
