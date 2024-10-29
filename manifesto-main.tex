@@ -136,17 +136,15 @@ Besides interactive dashboards for more nuanced result exploration \cite{bettr},
 
 
 
-\section*{Parameter sweeps}
+\section*{(Hyper)parameters}
 
 The impact of parameter choices can be included in a benchmark to test performance across a wider range of settings, or to find the optimal parameter settings. 
 
-Parameters can be method-specific, but also dataset-specific, e.g., the true number of clusters when evaluating clustering algorithms. In this case, they can also be seen as (dataset-specific) metadata. To differentiate between the effect of the parameter and the methods performances themselves, data-specific parameters should be shared across methods during evaluation.
+Dataset-specific parameters, e.g., the true number of clusters when evaluating clustering algorithms, are not method-specific. In this case, they can also be seen as (dataset-specific) metadata. To differentiate between the effect of the parameter and the methods performances themselves, data-specific parameters should be shared across methods during evaluation.
 
-Similarly, optimizing parameters for some but not other methods can skew results and should be avoided. 
+Similarly, optimizing method-specific parameters for some but not other methods can skew results and should be avoided. 
 
 Aside of optimal and method-specific parameter searches, comparing a method using different settings against other methods can be viewed as a comparing fully distinct methods. This should be clearly communicated in the results. 
-
-Altogether, evaluating parameters as part of a benchmark can give useful insights, but should be linked to a distinct and independent research objective.
 
 For continuous and collaborative benchmarking, parameter optimization and usage should be governed and coordinated between all contributors, ideally ensuring comparability and interpretability of the results. 
 
