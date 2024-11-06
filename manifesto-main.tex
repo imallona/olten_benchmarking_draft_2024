@@ -81,9 +81,9 @@ Benchmarking, which involves collecting reference datasets and demonstrating met
 \section*{Introduction}
 \label{sec:introduction}
 
-Benchmarking (further defined below) is a critical step in method development and published as either `methods-development papers' (MDPs) where new methods are compared against existing ones; or `benchmark-only papers' (BOPs), where a set of existing methods are compared in a more neutral way, as defined in \cite{Cao2023-jz}. A benchmarking study can be run by a single person or a small group, or it can be organized as a `challenge' or within a hackathon. In this work, we present a perspective on building a robust benchmarking ecosystem in bioinformatics, coming primarily from the methodologist's viewpoint (researchers developing computational tools).  While our focus is bioinformatics, we aim to abstract principles and connect to similar challenges in adjacent  fields. 
+Benchmarking (further defined below) is a critical step in method development and is typically published as either `methods-development papers' (MDPs) where new methods are compared against existing ones; or `benchmark-only papers' (BOPs), where a set of existing methods are compared in a more neutral way, as defined in \cite{Cao2023-jz}. A benchmarking study can be run by a single person or a small group, or it can be organized as a `challenge' or within a hackathon. In this work, we present a perspective on building a robust benchmarking ecosystem in bioinformatics, coming primarily from the methodologist's viewpoint (researchers developing computational tools).  While our focus is bioinformatics, we aim to abstract principles and connect to similar challenges in adjacent fields. 
 
-In our discussion, we outline concepts and specifications for an ideal \textit{benchmarking system}; we examine philosophical issues like gatekeeping and trust; and provide some technical recommendations, such as standardization practices.
+In our discussion, we outline concepts and specifications for an ideal benchmarking system; we examine philosophical issues like gatekeeping and trust; and provide some technical recommendations, such as standardization practices.
 
 
 \section*{Why a benchmarking system?}
@@ -134,18 +134,10 @@ Benchmarks are often focused on finding the `top' performing method(s), or on ge
 
 Besides interactive dashboards for more nuanced result exploration \cite{bettr}, multi-criteria decision analysis (MCDA) \cite{Taherdoost2023-wd} has been proposed to guide users through benchmark results and multidimensional scaling (MDS) has been used to differentiate the effect of single datasets or metrics and recognize patterns beyond aggregated performance \cite{Niessl2022-fk}. An extensive analysis and presentation of the results helps not only users in the long term but also the whole scientific field to identify limitations across various use cases. The first advantage of such a strategy is to force the user to an attentive reading of the performance results so that the correct use case and relevant methods can be identified. The second, more important, advantage of presenting benchmark results extensively is to identify the nuances, e.g., the scenarios, types of datasets, or aspects of performance that are systematically associated with poor results. Being public and open to contributions from specialists of different fields, a benchmarking system could gather more reference datasets and methods, and allow the current state of the field to be better grasped. 
 
-
-
-\section*{(Hyper)parameters}
-
-The impact of parameter choices can be included in a benchmark to test performance across a wider range of settings, or to find the optimal parameter settings. 
-
+Parameter choices influence results interpretation, as they can be included in a benchmark to test performance across a wider range of settings, or to find the optimal parameter settings. 
 Dataset-specific parameters, e.g., the true number of clusters when evaluating clustering algorithms, are not method-specific. They can also be seen as (dataset-specific) metadata. To differentiate between the effect of the parameter and the methods performances themselves, data-specific parameters should be shared across methods during evaluation.
-
 Similarly, optimizing method-specific parameters for some but not other methods can skew results and should be avoided. 
-
 Aside of optimal and method-specific parameter searches, comparing a method using different settings against other methods can be viewed as a comparing fully distinct methods. This should be clearly communicated in the results. 
-
 For continuous and collaborative benchmarking, parameter optimization and usage should be governed and coordinated between all contributors, ideally ensuring comparability and interpretability of the results. 
 
 \section*{Collaboration, gatekeeping and benchmarking infrastructure go hand in hand}
