@@ -33,6 +33,8 @@
 %\usepackage{url}
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
 
 %\usepackage{makecell} % multiline table cells
 
@@ -90,13 +92,22 @@ In our discussion, we outline concepts and specifications for an ideal benchmark
 \section*{Why a benchmarking system?}
 %\label{sec:main_section}
 
-We define a benchmark as a conceptual framework to evaluate the performance of computational methods for a given task, though it can extend to assessing other aspects, like data-generating technologies. A benchmark thus requires a well-defined task and a definition of correctness, or ground-truth, to be precisely defined in advance. A benchmark then consists of benchmark `components', such as simulations to generate datasets, preprocessing steps, methods, and metrics. 
-
-Can benchmarking be systematized? Benchmarks should be orchestrated and run by \emph{benchmarking systems} to create `artifacts' (code snapshots, file outputs to be shared, performance outputs).  The various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such a system should facilitate components to be public, open and allow contributions (e.g., corrections or new components), such that the benchmarks of the future can run more continuously. At the outset of a benchmark, a benchmark `definition' could be envisioned, which could give a formal specification of the entire set of components (and the pattern of artifacts to be generated). The benchmark definition could even be expressed as a single configuration file that specifies the scope and topology of components to include, details of the repositories (code implementations with versions), the instructions to create software environments (accessible across compute architectures), the parameters used, and what components to snapshot for a release. A benchmark definition in terms of layers and their corresponding challenges and opportunities within each layer is illustrated in Figure~\ref{fig:layers}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/bens_layers.pdf}
+    %\includegraphics[width=0.8\linewidth]{figures/fig_benchmarking.pdf}
+    {\color{red} \caption[Definitions.]{Benchmarks, workflows and benchmarking systems capabilities.}\label{fig:definitions}}
+\end{figure}
+
+
+We define a benchmark as a conceptual framework to evaluate the performance of computational methods for a given task, though it can extend to assessing other aspects, like data-generating technologies. A benchmark thus requires a well-defined task and a definition of correctness, or ground-truth, to be precisely defined in advance {\color{red} (Figure~\ref{fig:definitions})}. A benchmark then consists of benchmark `components', such as simulations to generate datasets, preprocessing steps, methods, and metrics. 
+
+Can benchmarking be systematized? {\color{red}Benchmarking aims to calculate, collect and report performance metrics of methods aiming to solve a task. Such process normally requires collecting the data, running the methods in an automated manner. Some of these tasks can be automated by workflow systems. Others, such as sharing results in an interactive manner and, particularly, result interpretation, go beyond what workflows offer. Similarly, collaborative benchmarking and challenges add extra layers of complexity, including collaboration tracking, hidding ground truths, or the ability to release multiple versions of the same benchmark as it grows (Figure~\ref{fig:definitions}). Moreover, scientific benchmarking borrows procedures from the scientific method and from scientific publishing, hence having expectations of fairness, reproducibility, transparency, and trust. 
+\sout{Benchmarks should be orchestrated and run by}} \emph{Benchmarking systems} {\color{red} aim to orchestrate the workflow management, benchmarking and community engagement aspects of the process  \sout{to create} to generate benchmark} `artifacts' (code snapshots, file outputs to be shared, performance outputs) {\color{red} in a systematic way and following good practices and standards. Namely,}  the various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such {\color{red}\sout{a}benchmarking} systems should facilitate components to be public, open and allow contributions (e.g., corrections or new components), such that the benchmarks of the future can run more continuously. At the outset of a benchmark, a benchmark `definition' could be envisioned, which could give a formal specification of the entire set of components (and the pattern of artifacts to be generated). The benchmark definition could even be expressed as a single configuration file that specifies the scope and topology of components to include, details of the repositories (code implementations with versions), the instructions to create software environments (accessible across compute architectures), the parameters used, and what components to snapshot for a release. A benchmark definition in terms of layers and their corresponding challenges and opportunities within each layer is illustrated in Figure~\ref{fig:layers}.}  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{../original_submission/figures/bens_layers.pdf}
     \caption[Benchmarking conceptual layers and their challenges.]{Benchmarking conceptual layers and their challenges. The process of benchmarking is multilayered, with layer-specific factors belonging to different categories (colored boxes) and challenges (in red). \emph{Hardware}: infrastructure and its costs. \emph{Data}: dataset archival, openness, interoperability, archival, and selection.  \emph{Software}: method implementations, reproducibility, workflow execution, continuous integration and delivery (CI/CD), versioning, quality assurance (QA). \emph{Community}: Standardization and impartiality (governance, transparency, building trust, long term maintainability). \emph{Knowledge}: research and meta-research, academic publications.}
     \label{fig:layers}
 \end{figure}
@@ -120,7 +131,7 @@ Over 350 workflow languages, platforms or systems  \cite{Wratten2021-el, Amstutz
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/bens_formalization.pdf}
+    \includegraphics[width=0.75\linewidth]{../original_submission/figures/bens_formalization.pdf}
     \caption[Benchmark formalization.]{Benchmark formalization. \textbf{A}) Running a benchmark requires running a workflow (execution phase) to generate results to be critically evaluated (analysis phase). \textbf{B}) the execution phase consists on a mapping of methods to specific input files to generate output files, with optional steps to harmonize data and parametrize runs.}
     \label{fig:formalization}
 \end{figure}
