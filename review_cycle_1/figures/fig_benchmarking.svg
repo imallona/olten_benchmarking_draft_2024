@@ -25,11 +25,11 @@
      showgrid="false"
      inkscape:zoom="1.0583333"
      inkscape:cx="423.3071"
-     inkscape:cy="339.68505"
+     inkscape:cy="339.21261"
      inkscape:window-width="1920"
-     inkscape:window-height="1056"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
+     inkscape:window-height="1149"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      showguides="false"
@@ -88,7 +88,7 @@
          x="106.35089"
          y="62.491898" /></text>
     <rect
-       style="fill:#e3dedb;fill-opacity:1;stroke:none;stroke-width:0.304138;stroke-opacity:1"
+       style="fill:#f2f2f2;fill-opacity:0.5;stroke:none;stroke-width:0.304138;stroke-opacity:1"
        id="rect52963"
        width="153.64024"
        height="74.639923"
@@ -287,7 +287,7 @@
        id="g53613"
        transform="matrix(1.1495,0,0,1.1495,-17.455295,-2.0445077)">
       <rect
-         style="fill:#d7eef4;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         style="fill:#d7eef4;fill-opacity:0.5;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="rect52963-71"
          width="133.65833"
          height="32.97422"
@@ -2403,7 +2403,7 @@
        id="path122719-70-50"
        style="stroke-width:0.00855387" />
     <rect
-       style="fill:#f4d7e3;fill-opacity:1;stroke:none;stroke-width:0.304138;stroke-opacity:1"
+       style="fill:#f4d7e3;fill-opacity:0.5;stroke:none;stroke-width:0.304138;stroke-opacity:1"
        id="rect52963-7"
        width="36.53019"
        height="74.277344"
@@ -2604,7 +2604,7 @@
            id="tspan68239-1"
            style="font-size:3.52778px;stroke-width:0.264583"
            x="67.731728"
-           y="86.156044">stealth runs</tspan></text>
+           y="86.156044">incognito runs</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -3035,13 +3035,13 @@
     <text
        xml:space="preserve"
        style="font-size:4.05518px;line-height:1.25;font-family:sans-serif;stroke-width:0.304138"
-       x="65.669762"
+       x="72.548935"
        y="10.153049"
        id="text171174"><tspan
          sodipodi:role="line"
          id="tspan171172"
          style="font-size:4.05518px;stroke-width:0.304138"
-         x="65.669762"
+         x="72.548935"
          y="10.153049">run properties</tspan></text>
     <text
        xml:space="preserve"
@@ -3792,7 +3792,7 @@
          id="tspan168978-5-7"
          style="font-size:3.6598px;stroke-width:0.274485"
          x="126.3427"
-         y="7.783792">derives</tspan></text>
+         y="7.783792">derive</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.304138px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="M 9.557955,59.340345 V 95.568582"
@@ -3800,7 +3800,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.304138px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M 99.308926,9.1295867 H 169.44776"
+       d="m 106.18809,9.1295867 h 63.25967"
        id="path64306"
        sodipodi:nodetypes="cc" />
   </g>
