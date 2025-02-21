@@ -61,7 +61,7 @@
 \affil[3]{Friedrich Miescher Institute for Biomedical Research, 4056 Basel, Switzerland}
 \affil[4]{Swiss Data Science Centre, 8092 Zurich, Switzerland}
 
-\affil[*]{\{izaskun.mallona,mark.robinson\}@mls.uzh.ch}
+\affil[*]{Correspondence: izaskun.mallona@gmail.com,mark.robinson@mls.uzh.ch}
 
 \linespread{1.4} 
 
@@ -103,7 +103,7 @@ In our discussion, we outline concepts {\color{red} related to workflow automati
 
 We define a benchmark as a conceptual framework to evaluate the performance of computational methods for a given task, though it can extend to assessing other aspects, like data-generating technologies. A benchmark thus requires a well-defined task and typically a definition of correctness, or ground-truth, to be precisely defined in advance {\color{red} (Figure~\ref{fig:definitions})}. A benchmark then consists of benchmark `components', such as simulations to generate datasets, preprocessing steps, methods, and metrics. 
 
-Can benchmarking be systematized? {\color{red}Benchmarking aims to calculate, collect and report performance metrics of methods aiming to solve a task. Such process normally requires collecting appropriate data and running methods in an automated manner. Some of these tasks can be automated by workflow systems. Others, such as sharing results in an interactive manner and, particularly, result interpretation and making results reusable by others, go beyond what workflows offer. Similarly, collaborative benchmarking and challenges add extra layers of complexity, including collaboration tracking, hiding ground truths, or the ability to release multiple versions of the same benchmark as it develops (Figure~\ref{fig:definitions}). Moreover, scientific benchmarking borrows procedures from the scientific method and from scientific publishing, hence having expectations of fairness, reproducibility, transparency, and trust. 
+Can benchmarking be systematized? {\color{red}Benchmarking aims to calculate, collect and report performance metrics of methods aiming to solve a task. Such a process normally requires collecting appropriate data and running methods in an automated manner. Some of these tasks can be automated by workflow systems. Others, such as sharing results in an interactive manner and, particularly, result interpretation and making results reusable by others, go beyond what workflows offer. Similarly, collaborative benchmarking and challenges add extra layers of complexity, including collaboration tracking, hiding ground truths, or the ability to release multiple versions of the same benchmark as it develops (Figure~\ref{fig:definitions}). Moreover, scientific benchmarking borrows procedures from the scientific method and from scientific publishing, hence having expectations of fairness, reproducibility, transparency, and trust. 
 \sout{Benchmarks should be orchestrated and run by}} \emph{Benchmarking systems} {\color{red} aim to orchestrate the workflow management, benchmarking and community engagement aspects of the process  \sout{to create} to generate benchmark} `artifacts' (code snapshots, file outputs to be shared, performance outputs) {\color{red} in a systematic way and following good practices and standards. Namely,}  the various elements of code, especially the details on how datasets are preprocessed and how methods are run, should be explicitly available for scrutiny. Such {\color{red}\sout{a}benchmarking} systems should facilitate components to be public, open and allow contributions (e.g., corrections or new components), such that the benchmarks of the future can run more continuously. At the outset of a benchmark, a benchmark `definition' could be envisioned, which could give a formal specification of the entire set of components (and the pattern of artifacts to be generated). The benchmark definition could even be expressed as a single configuration file that specifies the scope and topology of components to include, details of the repositories (code implementations with versions), the instructions to create software environments (accessible across compute architectures), the parameters used, and what components to snapshot for a release. A benchmark definition in terms of layers and the corresponding challenges and opportunities within each layer is illustrated in Figure~\ref{fig:layers}.  
 
 \begin{figure}
@@ -134,7 +134,8 @@ Over 350 workflow languages, platforms or systems  \cite{Wratten2021-el, Amstutz
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/bens_formalization_arrows.pdf}
+        %\includegraphics[width=0.75\linewidth]{../original_submission/figures/bens_formalization.pdf}
+    \includegraphics[width=0.75\linewidth]{figures/bens_formalization_arrows.pdf} % alternative
     \caption[Benchmark formalization.]{Benchmark formalization. \textbf{A}) Running a benchmark requires running a workflow (execution phase) to generate results to be critically evaluated (analysis phase). \textbf{B}) the execution phase consists on a mapping of methods to specific input files to generate output files, with optional steps to harmonize data and parametrize runs.}
     \label{fig:formalization}
 \end{figure}
@@ -156,7 +157,7 @@ Aside of optimal and method-specific parameter searches, comparing a method unde
 For continuous and collaborative benchmarking, parameter optimization and usage should be governed and coordinated between all contributors, ideally ensuring comparability and interpretability of the results. 
 
 {\color{red}
-Aside of task-tailored scores (i.e., intrinsic or extrinsic cluster validity measures for clustering tasks), collecting metrics to report computing performance (i.e., wallclock, on-disk read-write operations), requirements (e.g., GPUs, minimum memory) and their scalability depending on the input size (e.g., whether runtimes increase linearly, quadratically, etc) is key during benchmarking. To measure these performance metrics accurately, benchmarking systems ideally would provide means to: i) characterize the hardware running the benchmark, so method runtimes are comparable;  ii) track performance (CPU or GPU usage, memory) when running each benchmark component; iii) introduce minimal overhead during profiling; iv) collect variability in performance by running each method several times; and, v) go beyond reporting average resource usage and provide them over execution time (e.g., so embarrassingly-parallel algorithms can be differentiated from largely single-cored runs with few parallelism bursts).
+Aside of task-tailored scores (i.e., intrinsic or extrinsic cluster validity measures for clustering tasks), collecting metrics to report computing performance (i.e., wallclock, on-disk read-write operations), requirements (e.g., GPUs, minimum memory) and their scalability depending on the input size (e.g., whether runtimes increase linearly, quadratically, etc) is key during benchmarking. To measure these performance metrics accurately, benchmarking systems ideally would provide means to: i) characterize the hardware running the benchmark, so method runtimes are comparable;  ii) track performance (CPU or GPU usage, memory) when running each benchmark component; iii) introduce minimal overhead during profiling; iv) collect variability in performance by running each method several times; and, v) go beyond reporting average resource usage and provide them over execution time (e.g., so embarrassingly-parallel algorithms can be differentiated from largely single-cored runs with few bursts of parallel execution).
 }
 
 \section*{Collaboration, gatekeeping and benchmarking infrastructure go hand in hand}
@@ -290,7 +291,7 @@ We thank the Robinsonlab members for their constructive feedback.
 
 {\color{red}
 \section*{Funding}
-MDR acknowledges funding from the Swiss National Science Foundation (grants 200021\_212940 and 310030\_204869) as well as support from swissuniversities P5 Phase B funding (project 23-36\_14). CS is supported by the Novartis Research Foundation.
+MDR acknowledges funding from the Swiss National Science Foundation (grants 200021\_212940 and 310030\_204869) as well as support from swissuniversities P5 Phase B funding (project 23-36\_14). CS is supported by the Novartis Research Foundation. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
 
 \section*{Conflict of interest}
 
