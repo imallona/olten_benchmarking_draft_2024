@@ -97,7 +97,7 @@ In our discussion, we outline concepts related to workflow automation, benchmark
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/fig1_fig_benchmarking_aligned.pdf}
-     \caption[Run types, properties, capabilities and features.]{Solo and community benchmarks, workflows, and benchmarking-system-enabled (\textit{bs}) benchmarks all differ in run properties and their consequences in terms of capabilities and features, including whether: inputs, truths, hidden truths, metrics or run results are available for readers; code is free software, software environments are managed, and execution automated; there is a clear track of (human) contributors; results are run in comparable hardware; an entrypoint to results or result interpretation are provided. These run-intrinsic properties have consequences in terms of features (i.e., transparency, forkability, availability for metaanalysis) and technical capabilities (i.e. software versioning or ability to run locally without leaving traces - in \textit{incognito} mode). Green, blue and red ticks depict available, perhaps available and unavailable features, respectively. \label{fig:definitions}}
+     \caption[Run types, properties, capabilities and features.]{Solo and community benchmarks, workflows, and benchmarking-system-enabled (\textit{bs}) benchmarks all differ in run properties and their consequences in terms of capabilities and features, including whether: inputs, truths, hidden truths, metrics or run results are available for readers; code is {\color{red} \sout{free software}FOSS}, software environments are managed, and execution automated; there is a clear track of (human) contributors; results are run in comparable hardware; an entrypoint to results or result interpretation are provided. These run-intrinsic properties have consequences in terms of features (i.e., transparency, forkability, availability for metaanalysis) and technical capabilities (i.e. software versioning or ability to run locally without leaving traces - in \textit{incognito} mode). Green, blue and red ticks depict available, perhaps available and unavailable features, respectively. \label{fig:definitions}}
     
 \end{figure}
 
@@ -142,7 +142,7 @@ Over 350 workflow languages, platforms or systems  \cite{Wratten2021-el, Amstutz
 
 Benchmarking as a process deals with tasks other than workflow definition and execution, including: collecting and keeping track of contributions from users; provisioning appropriate hardware; handling a reproducible and efficient software stack (the advantages of decoupling environment handling from workflow execution are further discussed in the section~`Reproducible software environments'); managing storage and access-control lists; rendering results dashboards and summarizing results; versioning code, workflow runs, and files; and providing extensive documentation from defining scope or contribution guidelines, to transparent logging and crediting contributions and disseminating results (Figure~\ref{fig:definitions}).
 
-Currently, most benchmarking systems aim to enhance the workflow formalization and execution with strategies to fulfill benchmarking-specific needs. To name a few of these systems, \texttt{ncbench} bundles workflow specification and software management with \texttt{snakemake} to benchmark result visualization with \texttt{Datavzrd} \cite{Hanssen2023-uf}. \texttt{OpenEBench} runs workflows in any workflow language, frequently \texttt{nextflow}, and makes use of \texttt{openVRE} as GUI and means of visualization \cite{Capella-Gutierrez2017-dh}. \texttt{OpenProblems} uses \texttt{Viash} and \texttt{nextflow} to handle software environments and workflows, respectively, and reports updated leaderboards with custom code \cite{Luecken2024-fk}. To our knowledge, no benchmarking platform makes use of a fully expressive benchmark definition formalization language covering workflow generation and benchmarking-specific tasks. Such a language would go a long way toward facilitating benchmark conceptualization, community gathering and result sharing.
+Currently, most benchmarking systems aim to enhance the workflow formalization and execution with strategies to fulfill benchmarking-specific needs. To name a few of these systems, \texttt{ncbench} bundles workflow specification and software management with \texttt{snakemake} to benchmark result visualization with \texttt{Datavzrd} \cite{Hanssen2023-uf}. \texttt{OpenEBench} runs workflows in any workflow language, frequently \texttt{nextflow}, and makes use of \texttt{openVRE} as GUI and means of visualization \cite{Capella-Gutierrez2017-dh}. \texttt{OpenProblems} uses \texttt{Viash} and \texttt{nextflow} to handle software environments and workflows, respectively, and reports updated leaderboards with custom code \cite{Luecken2024-fk}. To our knowledge, no benchmarking platform makes use of a fully expressive benchmark definition formalization language covering workflow generation and benchmarking-specific tasks. {\color{red} Orthogonally, some components of the benchmarking process have been formalized: \texttt{Viash} systematizes workflow components; \texttt{PROV-O} represents provenance data; and \texttt{Research Objects} (\texttt{RO} \cite{bechhofer2013linked}, e.g., \texttt{RO-Crate}\cite{soiland2022packaging}) specify a system to store data (files) and their metadata. \sout{Such a language would go a long way toward facilitating benchmark conceptualization, community gathering and result sharing} Reusing pre-existing formalizations and extending them to the benchmarking field would facilitate conceptualization, community gathering and result sharing}.
 
 \section*{Scope and interpretation of benchmarking results}
 
@@ -160,17 +160,21 @@ Aside of task-tailored scores (i.e., intrinsic or extrinsic cluster validity mea
 
 \section*{Collaboration, gatekeeping and benchmarking infrastructure go hand in hand}
 
-In designing a benchmarking system, it may be helpful to specify whether the benchmark is intended to be run `centralized' or `decentralized'. These terms can take different meanings depending on the context, but here the benchmark infrastructure location is intended. In most systems, code will be tracked in a \texttt{git} repository (e.g., on GitHub, GitLab). The workflow execution and the storage of derived files are typically located either in local deployments (e.g., OEB-VRE for \texttt{OpenEBench}), commercial clouds (e.g., AWS for \texttt{OpenProblems}), commercial continuous integration and continuous delivery (e.g., GitHub actions for \texttt{ncbench}) or on arbitrary infrastructure (i.e., laptop, server or cloud; e.g., omnibenchmark \cite{omnibenchmark}). 
+In designing a benchmarking system, it may be helpful to specify whether the benchmark is intended to be run `centralized' or `decentralized'. These terms can take different meanings depending on the context, but here the benchmark infrastructure location is intended. In most systems, code will be tracked in a \texttt{git} repository (e.g., on GitHub, GitLab). The workflow execution and the storage of derived files are typically located either in local deployments (e.g., \texttt{OEB-VRE} for \texttt{OpenEBench}), commercial clouds (e.g., AWS for \texttt{OpenProblems}), commercial continuous integration and continuous delivery (e.g., GitHub actions for \texttt{ncbench}) or on arbitrary infrastructure (i.e., laptop, server or cloud; e.g., omnibenchmark \cite{omnibenchmark}). 
 
 Traditionally, benchmarks (whether BOP or MDP) are conducted in a decentralized fashion and typically by a small number of researchers (e.g., for MDP, the new method developer). This brings some disadvantages. For example, decentralization can be hugely inefficient; researchers studying the same task would collect reference datasets and code snippets to run methods, and implement a bespoke strategy (e.g., shell scripts) to orchestrate the methods run on datasets. Working together would mean sharing not only datasets and code snippets, but also execution environments (software but perhaps also hardware), alignment on parameters to evaluate and eventually sharing, consolidating, and interpreting results. However, because there are not many standards of how benchmarks are implemented \cite{Sonrel2023-te}, another disadvantage of decentralized benchmarks is that, while these components may eventually be openly shared as a product of a research study, the contents of a benchmark are non-interoperable, even across benchmarks of the same task. Furthermore, decentralized benchmarks have been criticized on the basis of `inflating model performance' due to decisions made in preprocessing or parameter tuning \cite{Luecken2024-fk}; such issues could be mitigated by gathering the `wisdom of crowds' that is implicit in running centralized benchmarks.
 
 Most benchmarks could begin decentralized, allowing for concept definition and preliminary results before `going public' (centralization phase). Users need a system that supports building benchmarks both ways, transitioning to centralization as the design matures. However, becoming centralized is not cost-free: it implies gatekeeping (contributors authenticate to the system and get access to computational resources) and requires additional measures that build trust (e.g., transparency).
+
+{\color{red}Large benchmarks are often run using cloud computing, further extending the challenge of ensuring hardware homogeneity (so results can be compared) and adding complexity to the benchmarking system capabilities to automate the provisioning and to group executions so costs are minimized. Automating cloud provisioning and constraining hardware flavors contribute to ensuring hardware homogeneity.}
 
 \section*{Building trust and bringing together communities}
 
 An active community is vital to the success of a benchmarking system. Benchmarkers (which may include multiple scientists) are responsible for planning and coordinating a benchmark, defining the task, possibly splitting it into subtasks or processing stages, and defining the data formats across the stages; the benchmarker also brings an authority role of how to review and approve contributions. Contributors (which may include method developers) curate and add content to the benchmark, which could be new datasets, methods or metrics, adhering to the guidelines set up by the benchmarker. Finally, the viewers (which may include benchmarkers and contributors) of benchmark results are users who retrieve one or more of the artifacts (code snippets, dataset files, intermediate results, or metric scores). These could span a range of use cases, including the data analyst choosing which method to use for a specific application, an instructor retrieving a curated dataset for teaching purposes, or a methods researcher prototyping their new method.
 
 For assembling and sustaining communities, strategies include organizing seminars or workshops (on the educational side) or  hackathons and challenges (aimed at practical onboarding or contributions). Career-related or financial incentives, such as the prospect of a scientific publication, or compensation for the allocated time, are also common motivators. For a method developer, contributing to a public benchmark provides a way to test their method without the need to set up all the infrastructure themselves, and also provides an opportunity to advertise their work. Ultimately, the likelihood that someone will contribute to a benchmark will be associated with whether the results are of interest to them, as well as how easy it is to contribute. Contributions can be made easier by providing good organization, suggested `good first issues' to tackle, contributor guidelines and a code of conduct.
+
+{\color{red} Authorship, e.g. acknowledging contributions, can be captured, reported and credited by using third-party platforms such as Apicuron \cite{hatos2021apicuron} or by bundling standardized contribution metadata such as the Citation File Format (\texttt{CFF}). So individual contributions to a benchmark can be acknowledged, browsed, and ideally propagated to academic deliverables (e.g. datasets, publications).} 
 
 Publicly soliciting contributions poses challenges, requiring a transparent setup to build trust. Benchmarkers must trace and test contributions to detect misuse and prevent non-functional or suboptimal implementations. This can be addressed by a `quarantine zone', where new content is automatically tested before being added to the system. Similarly, a contributor should be able to trace their contribution, to ensure that no unintended modifications are made after submission. Ultimately, many risks can be mitigated by transparency \cite{Greenstein2016-os}, and feedback loops with (all) developers.
 
@@ -245,10 +249,24 @@ Even a simple, single-person benchmark comparing methods relies on multiple cont
 
 %https://docs.google.com/spreadsheets/d/1HvhiDHkY5BSvIJ4607krXIiymk9uGWKsEg3cwaZVfBI/edit?gid=0#gid=0 
 
-Similarly, even if all benchmark code were free software, running it could be hindered by (non-free) proprietary interpreters (e.g., MATLAB). Benchmarking systems should be explicit in allowing or disallowing proprietary software, and be aware and track EULAs (end user license agreements). This conundrum extends to the operating system layer and to system dependencies (e.g., compilers). In terms of benchmark re-runnability, fully free software system dependencies arguably offer the highest reusability, and can be handled in a reproducible manner across operating systems and system architectures (e.g., amd64, arm64) \cite{droge2023-ax}.
+Similarly, even if all benchmark code were {\color{red} \sout{free} free and open source (FOSS)} software, running it could be hindered by (non-free) proprietary interpreters (e.g., MATLAB). Benchmarking systems should be explicit in allowing or disallowing proprietary software, and be aware and track EULAs (end user license agreements). This conundrum extends to the operating system layer and to system dependencies (e.g., compilers). In terms of benchmark re-runnability, fully {\color{red} \sout{free software} FOSS} system dependencies arguably offer the highest reusability, and can be handled in a reproducible manner across operating systems and system architectures (e.g., amd64, arm64) \cite{droge2023-ax}.
 
 Finally, data files (inputs and outputs) are frequently stored in centralized repositories \cite{Potter2015-fs, Sicilia2017-ko, van-de-Sandt2019-wd} under content licenses, which might enforce attribution or copyleft. A benchmarking system should automate license metadata handling during data import and export, crediting the original authors if applicable; it also represents an opportunity to enforce that academics use appropriate licenses for data and code. 
 
+{\color{red} \section{Hardware}
+
+Benchmarking systems are software meant to orchestrate other software (e.g. benchmarked methods). Software are run on specific hardware, from commodity computers to dedicated hardware, often large servers or academic and commercial clouds, posing a challenge: benchmarked methods should have access to comparable resources (hardware).
+
+compilation flags
+
+multiarch, ARMs
+
+containers, discuss software then
+
+computing quotas, concurrency, IO
+
+how to profile performance and fingerprint resources
+}
 
 \section*{There are various hidden design tradeoffs}
 
@@ -311,361 +329,11 @@ Conceptualization: all. Figures: IM, BC. Original draft preparation: all. Writin
 % Use the PLoS provided BiBTeX style
 \bibliographystyle{plos2015}
 
-% \bibliography{clean} % your .bib file
+\bibliography{2_second_review/src_do_not_upload/clean} % your .bib file
 
-\begin{thebibliography}{10}
+% \begin{thebibliography}{10}
 
-\bibitem{cao2023-jz}
-Cao Y, Yu L, Torkel M, Kim S, Lin Y, Yang P, et~al.
-\newblock The current landscape and emerging challenges of benchmarking
-  single-cell methods.
-\newblock bioRxiv. 2023; p. 2023.12.19.572303.
-
-\bibitem{Sonrel2023-te}
-Sonrel A, Luetge A, Soneson C, Mallona I, Germain PL, Knyazev S, et~al.
-\newblock Meta-analysis of (single-cell method) benchmarks reveals the need for
-  extensibility and interoperability.
-\newblock Genome Biol. 2023;24:119.
-
-\bibitem{Boulesteix2013-vy}
-Boulesteix AL, Lauer S, Eugster MJA.
-\newblock A plea for neutral comparison studies in computational sciences.
-\newblock PLoS One. 2013;8:e61562.
-
-\bibitem{Weber2019-el}
-Weber LM, Saelens W, Cannoodt R, Soneson C, Hapfelmeier A, Gardner PP, et~al.
-\newblock Essential guidelines for computational method benchmarking.
-\newblock Genome Biol. 2019;20:125.
-
-\bibitem{Brooks2024-rq}
-Brooks TG, Lahens NF, Mrčela A, Grant GR.
-\newblock Challenges and best practices in omics benchmarking.
-\newblock Nature Review Genetics. 2024;25(5):326--339.
-
-\bibitem{Rich2024-jh}
-Rich JM, Moses L, Einarsson PH, Jackson K, Luebbert L, Booeshaghi AS, et~al.
-\newblock The impact of package selection and versioning on single-cell
-  {RNA}-seq analysis.
-\newblock bioRxivorg. 2024; p. 2024.04.04.588111.
-
-\bibitem{Wilkinson2016-bh}
-Wilkinson MD, Dumontier M, Aalbersberg IJJ, Appleton G, Axton M, Baak A, et~al.
-\newblock The {FAIR} Guiding Principles for scientific data management and
-  stewardship.
-\newblock Sci Data. 2016;3:160018.
-
-\bibitem{Nevers_2022}
-Nevers Y, Jones TEM, Jyothi D, Yates B, Ferret M, Portell-Silva L, et~al.
-\newblock The Quest for Orthologs orthology benchmark service in 2022.
-\newblock Nucleic Acids Research. 2022;50(W1):W623–W632.
-\newblock doi:{10.1093/nar/gkac330}.
-
-\bibitem{Bryce_Smith_2023}
-Bryce-Smith S, Burri D, Gazzara MR, Herrmann CJ, Danecka W, Fitzsimmons CM,
-  et~al.
-\newblock Extensible benchmarking of methods that identify and quantify
-  polyadenylation sites from RNA-seq data.
-  2023;doi:{10.1101/2023.06.23.546284}.
-
-\bibitem{Pardo_Palacios_2023}
-Pardo-Palacios FJ, Wang D, Reese F, Diekhans M, Carbonell-Sala S, Williams B,
-  et~al.
-\newblock Systematic assessment of long-read RNA-seq methods for transcript
-  identification and quantification. 2023;doi:{10.1101/2023.07.25.550582}.
-
-\bibitem{meyer2021advances}
-Meyer P, Saez-Rodriguez J.
-\newblock Advances in systems biology modeling: 10 years of crowdsourcing DREAM
-  challenges.
-\newblock Cell Systems. 2021;12(6):636--653.
-
-\bibitem{zook2019open}
-Zook JM, McDaniel J, Olson ND, Wagner J, Parikh H, Heaton H, et~al.
-\newblock An open resource for accurately benchmarking small variant and
-  reference calls.
-\newblock Nature Biotechnology. 2019;37(5):561--566.
-
-\bibitem{moult2005-ne}
-Moult J.
-\newblock A decade of {CASP}: progress, bottlenecks and prognosis in protein
-  structure prediction.
-\newblock Curr Opin Struct Biol. 2005;15:285--289.
-
-\bibitem{Wratten2021-el}
-Wratten L, Wilm A, Göke J.
-\newblock Reproducible, scalable, and shareable analysis pipelines with
-  bioinformatics workflow managers.
-\newblock Nat Methods. 2021;18:1161--1168.
-
-\bibitem{Amstutz2024-qk}
-Amstutz P, Mikheev M, Crusoe MR, Tijanić N, Lampa S. Existing Workflow
-  systems; 2024.
-\newblock Available from: \url{https://s.apache.org/existing-workflow-systems}.
-
-\bibitem{Amstutz2016-vo}
-Amstutz P, Crusoe MR, Tijanić N, Chapman B, Chilton J, Heuer M, et~al.. Common
-  Workflow Language, {v1}.0; 2016.
-\newblock Available from:
-  \url{https://research.manchester.ac.uk/files/57032693/cwl_1.0_workflow.pdf}.
-
-\bibitem{Goble2020-ps}
-Goble C, Cohen-Boulakia S, Soiland-Reyes S, Garijo D, Gil Y, Crusoe MR, et~al.
-\newblock FAIR computational workflows.
-\newblock Data Intell. 2020;2:108--121.
-
-\bibitem{Hanssen2023-uf}
-Hanssen F, Gabernet G, Smith NH, Mertes C, Neogi AG, Brandhoff L, et~al.
-\newblock NCBench: providing an open, reproducible, transparent, adaptable, and
-  continuous benchmark approach for {DNA}-sequencing-based variant calling.
-\newblock F1000Research. 2023;12:1125.
-
-\bibitem{Capella-Gutierrez2017-dh}
-Capella-Gutierrez S, de~la Iglesia D, Haas J, Lourenco A, Fernández JM,
-  Repchevsky D, et~al.
-\newblock Lessons Learned: Recommendations for Establishing Critical Periodic
-  Scientific Benchmarking.
-\newblock bioRxiv. 2017; p. 181677.
-
-\bibitem{Luecken2024-fk}
-Luecken MD, Gigante S, Burkhardt DB, Cannoodt R, Strobl DC, Markov NS, et~al.
-\newblock Defining and benchmarking open problems in single-cell analysis.
-\newblock Res Sq. 2024;.
-
-\bibitem{Khan2018-ot}
-Khan RU, Zhang X, Kumar R, Aboagye EO.
-\newblock Evaluating the performance of {ResNet} model based on image
-  recognition.
-\newblock In: Proceedings of the 2018 International Conference on Computing and
-  Artificial Intelligence. ACM; 2018.Available from:
-  \url{https://dl.acm.org/doi/10.1145/3194452.3194461}.
-
-\bibitem{Jumper2021-oq}
-Jumper J, Evans R, Pritzel A, Green T, Figurnov M, Ronneberger O, et~al.
-\newblock Highly accurate protein structure prediction with AlphaFold.
-\newblock Nature. 2021;596:583--589.
-
-\bibitem{Lutge2021-mt}
-Lütge A, Zyprych-Walczak J, Brykczynska~Kunzmann U, Crowell HL, Calini D,
-  Malhotra D, et~al.
-\newblock CellMixS: quantifying and visualizing batch effects in single-cell
-  RNA-seq data.
-\newblock Life Sci Alliance. 2021;4.
-
-\bibitem{Reinke2024-dw}
-Reinke A, Tizabi MD, Baumgartner M, Eisenmann M, Heckmann-Nötzel D, Kavur AE,
-  et~al.
-\newblock Understanding metric-related pitfalls in image analysis validation.
-\newblock Nat Methods. 2024;21:182--194.
-
-\bibitem{funkyheatmap}
-Cannoodt R, Saelens W. type [;]Available from:
-  \url{https://cran.r-project.org/web/packages/funkyheatmap/index.html}.
-
-\bibitem{Saelens2019-jy}
-Saelens W, Cannoodt R, Todorov H, Saeys Y.
-\newblock A comparison of single-cell trajectory inference methods.
-\newblock Nat Biotechnol. 2019;37:547--554.
-
-\bibitem{Jelizarow2010-kr}
-Jelizarow M, Guillemot V, Tenenhaus A, Strimmer K, Boulesteix AL.
-\newblock Over-optimism in bioinformatics: an illustration.
-\newblock Bioinformatics. 2010;26:1990--1998.
-
-\bibitem{Boulesteix2010-zj}
-Boulesteix AL.
-\newblock Over-optimism in bioinformatics research.
-\newblock Bioinformatics. 2010;26:437--439.
-
-\bibitem{Strobl2024-lp}
-Strobl C, Leisch F.
-\newblock Against the "one method fits all data sets" philosophy for comparison
-  studies in methodological research.
-\newblock Biom J. 2024;66:e2200104.
-
-\bibitem{bettr}
-Marini F, Soneson C. type [; 2024]Available from:
-  \url{https://www.bioconductor.org/packages/release/bioc/html/bettr.html}.
-
-\bibitem{Taherdoost2023-wd}
-Taherdoost H, Madanchian M.
-\newblock Multi-criteria decision making ({MCDM}) methods and concepts.
-\newblock Encyclopedia (Basel, 2021). 2023;3:77--87.
-
-\bibitem{Niessl2022-fk}
-Nießl C, Herrmann M, Wiedemann C, Casalicchio G, Boulesteix AL.
-\newblock Over‐optimism in benchmark studies and the multiplicity of design
-  and analysis options when interpreting their results.
-\newblock Wiley Interdiscip Rev Data Min Knowl Discov. 2022;12:e1441.
-
-\bibitem{omnibenchmark}
-Mallona I, Luetge A, Carrillo B, Incicau D, Gerber R, Sonrel A, et~al.
-\newblock Omnibenchmark (alpha) for continuous and open benchmarking in
-  bioinformatics.
-\newblock arXiv preprint arXiv:240917038. 2024;.
-
-\bibitem{Greenstein2016-os}
-Greenstein S, Zhu F.
-\newblock Open content, Linus’ law, and neutral Point of View.
-\newblock Inf Syst Res. 2016;27:618--635.
-
-\bibitem{Sullivan2019-wh}
-Sullivan I, DeHaven A, Mellor D.
-\newblock Open and reproducible research on open science framework.
-\newblock Curr Protoc Essent Lab Tech. 2019;18:e32.
-
-\bibitem{Olevska2021-if}
-Olevska A, Bert B, Ebrahimi L, Schonfelder G, Heinl C.
-\newblock Ensuring reproducible research requires a support infrastructure: The
-  value of public registries to publishers.
-\newblock Sci Editor. 2021; p. 4--7.
-
-\bibitem{Teo2024-wk}
-Teo AYY, Squair JW, Courtine G, Skinnider MA.
-\newblock Best practices for differential accessibility analysis in single-cell
-  epigenomics.
-\newblock Nature Communications. 2024;15(1):8805.
-
-\bibitem{Siepe2023-tz}
-Siepe BS, Bartoš F, Morris TP, Boulesteix AL, Heck DW, Pawel S.
-\newblock Simulation studies for methodological research in psychology: A
-  standardized template for planning, preregistration, and reporting.
-\newblock PsyArXiv. 2023;.
-
-\bibitem{simpkin2023tertiary}
-Simpkin AJ, Mesdaghi S, S{\'a}nchez~Rodr{\'\i}guez F, Elliott L, Murphy DL,
-  Kryshtafovych A, et~al.
-\newblock Tertiary structure assessment at CASP15.
-\newblock Proteins: Structure, Function, and Bioinformatics.
-  2023;91(12):1616--1635.
-
-\bibitem{kryshtafovych2019critical}
-Kryshtafovych A, Schwede T, Topf M, Fidelis K, Moult J.
-\newblock Critical assessment of methods of protein structure prediction
-  (CASP)—Round XIII.
-\newblock Proteins: Structure, Function, and Bioinformatics.
-  2019;87(12):1011--1020.
-
-\bibitem{Howison2015-rc}
-Howison J, Deelman E, McLennan MJ, Ferreira~da Silva R, Herbsleb JD.
-\newblock Understanding the scientific software ecosystem and its impact:
-  Current and future measures.
-\newblock Res Eval. 2015;24:454--470.
-
-\bibitem{Trisovic2022-ol}
-Trisovic A, Lau MK, Pasquier T, Crosas M.
-\newblock A large-scale study on research code quality and execution.
-\newblock Sci Data. 2022;9:60.
-
-\bibitem{Pike1984-we}
-Pike R, Kernighan B.
-\newblock The {UNIX} system: Program design in the {UNIX} environment.
-\newblock AT T Bell Lab Tech J. 1984;63:1595--1605.
-
-\bibitem{Proctor2018-do}
-Proctor RW, Schneider DW.
-\newblock Hick’s law for choice reaction time: A review.
-\newblock Quarterly Journal of Experimental Psychology. 2018;71:1281--1299.
-
-\bibitem{ProcidaUnknown-vf}
-Procida D. Diátaxis;.
-\newblock Available from: \url{https://diataxis.fr/}.
-
-\bibitem{Hill2024-gf}
-Hill D, Antunes BA, Bertrand A, Nguifo EM, Yon L, Nautré-Domanski J, et~al..
-  Machine learning and reproducibility impact of random numbers; 2024.
-\newblock Available from: \url{https://hal.science/hal-04642175v1}.
-
-\bibitem{Kurtzer2017-mn}
-Kurtzer GM, Sochat V, Bauer MW.
-\newblock Singularity: Scientific containers for mobility of compute.
-\newblock PLoS One. 2017;12:e0177459.
-
-\bibitem{Hoste2012-gg}
-Hoste K, Timmerman J, Georges A, De~Weirdt S.
-\newblock EasyBuild: Building Software with Ease.
-\newblock In: 2012 SC Companion: High Performance Computing, Networking Storage
-  and Analysis. IEEE; 2012. p. 572--582.
-\newblock Available from:
-  \url{https://ieeexplore.ieee.org/abstract/document/6495863}.
-
-\bibitem{Gamblin2015-ll}
-Gamblin T, LeGendre M, Collette MR, Lee GL, Moody A, de~Supinski BR, et~al.
-\newblock The Spack package manager: bringing order to {HPC} software chaos.
-\newblock In: Proceedings of the International Conference for High Performance
-  Computing, Networking, Storage and Analysis. ACM; 2015.Available from:
-  \url{https://dl.acm.org/doi/10.1145/2807591.2807623}.
-
-\bibitem{Blomer2013-jk}
-Blomer J, Buncic P, Meusel R.
-\newblock The {CernVM} file system.
-\newblock CERN, Geneva, Switzerland, Tech Rep. 2013; p. 2--1.
-
-\bibitem{Boissonneault2019-wm}
-Boissonneault M, Oldeman BE, Taylor RP.
-\newblock Providing a unified software environment for Canada's national
-  advanced computing centers.
-\newblock In: Proceedings of the Practice and Experience in Advanced Research
-  Computing on Rise of the Machines (learning). ACM; 2019.Available from:
-  \url{https://dl.acm.org/doi/10.1145/3332186.3332210}.
-
-\bibitem{droge2023-ax}
-Dröge B, Holanda~Rusu V, Hoste K, van Leeuwen C, O'Cais A, Röblitz T.
-\newblock EESSI: A cross‐platform ready‐to‐use optimised scientific
-  software stack.
-\newblock Softw Pract Exp. 2023;53:176--210.
-
-\bibitem{Laine2007-py}
-Laine C, Goodman SN, Griswold ME, Sox HC.
-\newblock Reproducible Research: Moving toward Research the Public Can Really
-  Trust.
-\newblock Ann Intern Med. 2007;146:450.
-
-\bibitem{Kreutzer2014-ua}
-Kreutzer T.
-\newblock Open content: A practical guide to using Creative Commons licences.
-  2014;.
-
-\bibitem{Potter2015-fs}
-Potter ME, Smith T.
-\newblock Making code citable with Zenodo and GitHub.
-\newblock Software Sustainibility Institute. 2015;.
-
-\bibitem{Sicilia2017-ko}
-Sicilia MA, García-Barriocanal E, Sánchez-Alonso S.
-\newblock Community curation in open dataset repositories: Insights from
-  zenodo.
-\newblock Procedia Comput Sci. 2017;106:54--60.
-
-\bibitem{van-de-Sandt2019-wd}
-van~de Sandt S, Nielsen LH, Ioannidis A, Muench A, Henneken E, Accomazzi A,
-  et~al.
-\newblock Practice meets principle: Tracking software and data citations to
-  Zenodo DOIs.
-\newblock arXiv [csDL]. 2019;.
-
-\bibitem{Lamb2021-tb}
-Lamb C, Zacchiroli S.
-\newblock Reproducible Builds: Increasing the integrity of software supply
-  chains.
-\newblock arXiv [csSE]. 2021;.
-
-\bibitem{Huynh2023-pq}
-Huynh D. How Python Data Science Libraries Can Be Hijacked (and What You Can Do
-  About It); 2023.
-\newblock Available from:
-  \url{https://blog.mithrilsecurity.io/how-python-data-science-libraries-can-be-hijacked-and-what-you-can-do-about-it-2/}.
-
-\bibitem{Bleih2024-lv}
-Bleih A. New Vulnerability in {R}'s Deserialization Discovered; 2024-05-02.
-\newblock Available from:
-  \url{https://cyberint.com/blog/research/new-vulnerability-in-rs-deserialization-discovered/}.
-
-\bibitem{LeboUnknown-om}
-Lebo T, Sahoo S, McGuinness D, Belhajjame K, Cheney J, Corsar D, et~al..
-  PROV-O: The PROV ontology;.
-\newblock Available from: \url{http://www.w3.org/TR/2013/REC-prov-o-20130430/}.
-
-\end{thebibliography}
+%\end{thebibliography}
 
 
 \end{document}
