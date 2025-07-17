@@ -182,6 +182,8 @@ A key challenge is selecting datasets and metrics for a benchmark. Diversity of 
 
 Neutrality is a highly desirable property in a benchmark: it means that efforts have been taken to ensure impartiality or unbiasedness (or at least transparency) of the various choices made (e.g., what datasets to include, how exactly to run methods, how to evaluate methods) \cite{Weber2019-el, Jelizarow2010-kr}. One could claim that all MDP benchmarks are non-neutral, since the goal is generally to highlight the virtues of a new method. Similarly, ground truth generation and simulations in MDP benchmarks can unconsciously mirror the method capabilities, mechanisms, or strengths, thus biasing evaluation. Furthermore, there are many field experts who may wish to conduct a benchmark (or participate in a collaborative benchmark) on analyses that involve their own tools, where neutrality is then harder to establish. Here, recent work to mitigate this conflict involves pre-registration and posting the parameters of the study in advance at a registry \cite{Sullivan2019-wh, Olevska2021-if, Teo2024-wk}. In contrast, BOP benchmarks give, in principle, a higher degree of neutrality, but the challenge to assess neutrality directly remains. Other benchmarking models are possible, from challenges to hackathons, with the hope that a consensus of the masses can further help to establish neutrality. One potential strategy, in the context of the systematic design of benchmarks, is establishing a system where a benchmark definition is parsed into a pre-registration template. Templates exist for simulation studies that could be adapted more generally for benchmarking projects \cite{Siepe2023-tz}. 
 
+{\color{red} Transparency and clear governance guidelines provide an effective to detect and react to potential misuse, e.g. by explicit rules to validate results. Other ethical considerations include facilitating safe interactions and fair resources allocation and efficiency. Clear code of conduct statements proactively flagging harassment (e.g., by sex, ethnicity or academic seniority, among others) provide explicit means to ease collaboration. In terms of efficiency, comparable resources allocation (e.g., computing power, support) to all contribuors, while also being aware of $CO_2$ emissions, could also be spelled out in the governance model.}
+
 Mature communities are key to sustaining and reflecting the existing challenges in a given field. For instance, CASP, a continuous benchmark by nature, has a established community that defines the scope of critical assessment, input data, target definitions, and composite and normalized metrics to equally weight multiple performance scores \cite{simpkin2023tertiary}. At the continuous benchmark level, CASP keeps track of past performances and introduces metrics to evaluate possible artifacts, i.e., whether progress during a CASP round could arise from different target difficulty \cite{kryshtafovych2019critical}. To facilitate community contribution, we believe that benchmarking systems can lower the barrier to contributing, hence making the contribution efforts less likely to be biased. 
 
 
@@ -218,7 +220,15 @@ The responsibility of handling software environments poses an interesting challe
 
 Finally, scientific software management handling is known for its nuances, including abundant dependencies with known incompatibilities and complex installation recipes \cite{droge2023-ax}. Scientific software management is handled via traditional (Linux) package managers (RPMs, DEBs), central software stacks and environment modules (i.e., Lmod), conda, containers, or read-only network filesystems providing ready-to-use installations (CernVM-FS). These strategies are under active development: EESSI \cite{droge2023-ax} and the Digital Research Alliance of Canada \cite{Boissonneault2019-wm} are effectively providing multi-purpose, reusable and efficient software installations via CernVM-FS; \texttt{conda} is speeding up their deployment procedures (via \texttt{py-rattler}/\texttt{pixi}) and allowing compilation to Web assembly (to execute code within a web browser); and \texttt{apptainer} (former \texttt{Singularity}) provides rootless containerization suitable for running in scientific clusters. 
 
+{\color{red} \section{Hardware}
 
+Software, both from benchmarking systems or from the benchmarking workflow and hence benchmarked methods, can be run in different hardware, from commodity computers to dedicated hardware, often large servers or academic and commercial clouds. Performance profiling (e.g., how fast a benchmarked method runs) requires access to fair and comparable resources. 
+
+Comparable resources can be provisioned on demand in cloud computing, or can be ensured by deploying benchmarking systems in controlled and dedicated hardware. Ideally, performance results (e.g., wallclock time) could be bundled to metadata describing the used hardware (e.g., CPU characteristics).
+
+It is worth noting that CPU microarchitecture influences performance, particularly when using optimized compilers to improve performance of benchmarked methods at the expense of making binaries microarchitecture-specific. This feature is not solved by containerization. Benchmarking systems can automate software installations with equivalent degrees of optimization across benchmarked methods, and/or provide multiarchitecture builds.
+
+Finally, benchmarking methods could benefit from the high performance computing-style user quotas and timeouts to cap the maximum memory and/or CPU cycles each method can use.}
 
 \section*{Software licenses and attribution}
 
@@ -253,20 +263,7 @@ Similarly, even if all benchmark code were {\color{red} \sout{free} free and ope
 
 Finally, data files (inputs and outputs) are frequently stored in centralized repositories \cite{Potter2015-fs, Sicilia2017-ko, van-de-Sandt2019-wd} under content licenses, which might enforce attribution or copyleft. A benchmarking system should automate license metadata handling during data import and export, crediting the original authors if applicable; it also represents an opportunity to enforce that academics use appropriate licenses for data and code. 
 
-{\color{red} \section{Hardware}
 
-Benchmarking systems are software meant to orchestrate other software (e.g. benchmarked methods). Software are run on specific hardware, from commodity computers to dedicated hardware, often large servers or academic and commercial clouds, posing a challenge: benchmarked methods should have access to comparable resources (hardware).
-
-compilation flags
-
-multiarch, ARMs
-
-containers, discuss software then
-
-computing quotas, concurrency, IO
-
-how to profile performance and fingerprint resources
-}
 
 \section*{There are various hidden design tradeoffs}
 
