@@ -1,0 +1,4 @@
+- `response_to_reviewers.pdf` is a direct PDF export of: https://docs.google.com/document/d/17HWlde21AxZfvcxEPjjRylawtAWPhVPbI0zjeprvzv0/edit?tab=t.0#heading=h.s8509agnb8kl
+- `manuscript.tex` contains the updated manuscript without tracking changes
+- `manuscript_with_tracked_changes.tex` contains the updated manuscript with tracked changes
+- no `clean.bib` to be used, but bbl instead (with biber)
