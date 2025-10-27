@@ -74,6 +74,9 @@
 \documentclass[10pt,letterpaper]{article}
 \usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
 
+% too adjust the width of a very wide table
+\usepackage{adjustbox}
+
 % amsmath and amssymb packages, useful for mathematical formulas and symbols
 \usepackage{amsmath,amssymb}
 
@@ -197,13 +200,13 @@ Anthony Sonrel\textsuperscript{1,2}
 Mark D. Robinson\textsuperscript{1,2,*}
 \\
 \bigskip
-\textbf{1} {Department of Molecular Life Sciences, University of Zurich, 8057 Zurich, Switzerland}
+\textbf{1} {Department of Molecular Life Sciences, University of Zurich, Zurich, Switzerland}
 \\
-\textbf{2} {SIB Swiss Institute of Bioinformatics, University of Zurich, 8057 Zurich, Switzerland}
+\textbf{2} {SIB Swiss Institute of Bioinformatics, University of Zurich, Zurich, Switzerland}
 \\
-\textbf{3} Friedrich Miescher Institute for Biomedical Research, 4056 Basel, Switzerland
+\textbf{3} Friedrich Miescher Institute for Biomedical Research, Basel, Switzerland
 \\
-\textbf{4} Swiss Data Science Centre, 8092 Zurich, Switzerland
+\textbf{4} Swiss Data Science Centre, Zurich, Switzerland
 \bigskip
 
 % Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
@@ -418,7 +421,7 @@ Even a simple, single-person benchmark comparing methods relies on multiple cont
     \caption[Overview of commonly-used open-source licenses in benchmarking studies.]{Overview of commonly used open-source licenses in benchmarking studies. Code or data with restrictions to redistribute or modify are not suitable for collaborative benchmarking. \emph{License}: license name. \emph{Redistribution}: right to redistribute, e.g., reuse in another benchmark/somewhere else. \emph{Modification}: right to modify the code to produce derivative works, e.g., in another benchmark/somewhere else. \emph{Sublicensing}: for derivative works, obligation to keep the same license or freedom to be licensed differently (even copyright). Relevant if the code contributor does not want derivative works to be `closed source' or copyrighted. \emph{Commercial use}: for derivative works, whether commercial usage is restricted or not. Relevant to code contributors not willing commercial reuse of their code (by others). \emph{Attribution}: for derivative works, obligation to attribute original author(s). Relevant to code contributors willing their names/authorship to be credited in derivative works. \emph{Linking}: dynamic or static linking / use as libraries. Particularly important for metrics, as these code can be frequently incorporated (=executed) across benchmarks. }
     \vspace{0.5cm}
     \centering
-%    \begin{adjustbox}{max width=\textwidth}
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
     License       &  Redistribution       &   Modification   & Sublicensing  & Commercial use & Attribution    & Linking   \\ \hline
@@ -433,7 +436,7 @@ Even a simple, single-person benchmark comparing methods relies on multiple cont
     \textsc{CC-BY} &	allowed	& allowed	& full freedom 	& allowed& 	required&	(not a code license) \\ \hline
 
     \end{tabular}
-%    \end{adjustbox}
+    \end{adjustbox}
     \label{tab:licenses}
 \end{table}
 
